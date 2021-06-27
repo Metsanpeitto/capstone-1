@@ -7,9 +7,7 @@
     "autoprefixer": "^10.2.6",
     "browserlist": "^1.0.1",
     "postcss-cli": "^8.3.1",
-    "postcss-load-config": "^3.1.0",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.19.0"
+    "postcss-load-config": "^3.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -24,13 +22,17 @@
     "hint": "^6.1.4",
     "node-sass": "^6.0.0",
     "postcss": "^8.3.5",
+    "postcss-html": "^0.36.0",
     "postcss-loader": "^6.1.0",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.3.1",
     "prettier-eslint": "^12.0.0",
     "prettier-eslint-cli": "^5.0.1",
     "prettier-stylelint": "^0.4.2",
     "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^21.0.0"
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

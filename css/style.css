@@ -66,6 +66,26 @@
     top: 0.000001vh;
   }
 }
+@-webkit-keyframes dawn {
+  0% {
+    top: 0.000001vh;
+    visibility: visible;
+  }
+  100% {
+    top: 100vh;
+    visibility: hidden;
+  }
+}
+@keyframes dawn {
+  0% {
+    top: 0.000001vh;
+    visibility: visible;
+  }
+  100% {
+    top: 100vh;
+    visibility: hidden;
+  }
+}
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -351,6 +371,37 @@
   font-weight: normal;
   font-style: normal;
 }
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 4px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+
+  h6 {
+    font-size: 8px;
+    line-height: 14px;
+    letter-spacing: 0.4px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+}
 /**
 * buttons.scss
 *
@@ -380,6 +431,160 @@
 * as simple and clean as possible. So the user don't have any distraction
 * or interference that could cost us lose the oportunity.
  Layout about  */
+.l-about {
+  display: contents;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  /* Add some content at the bottom of the video/page */
+}
+.l-about #myVideo {
+  position: fixed;
+  right: 0;
+  opacity: 1;
+  width: 140%;
+}
+.l-about .content {
+  position: absolute;
+  background: #f6f6f6de;
+  max-width: 100vw;
+  height: 100vh;
+  display: contents;
+}
+.l-about .content .about-content {
+  max-width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6f6f6), to(#f6f6f6e7));
+  background: linear-gradient(0deg, #f6f6f6, #f6f6f6e7);
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 100%;
+  position: relative;
+}
+.l-about .content .about-content .matrix {
+  background-image: url(/images/matrix.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-row-start: 3;
+  width: 50%;
+  height: 25%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .turn {
+  background-image: url(/images/turn.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25%;
+  top: 3%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .chess {
+  background-image: url(/images/chess.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25%;
+  top: 3%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .cross {
+  background-image: url(/images/cross.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25%;
+  top: 6%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .o {
+  background-image: url(/images/o.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25%;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .dollar {
+  background-image: url(/images/dollar.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25%;
+  top: 5%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .squares {
+  background-image: url(/images/squares.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25%;
+  top: 10%;
+  left: 55%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+}
+.l-about .content .about-content .hero-section {
+  max-width: 80vw;
+  grid-row-start: 2;
+  position: absolute;
+  justify-self: center;
+}
+.l-about .content .about-content .hero-section h3 {
+  color: #ec5242;
+}
+.l-about .content .about-content .hero-section img {
+  width: 105%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+}
+.l-about .content .about-content .about-parraf {
+  grid-row-start: 3;
+  width: 85vw;
+  height: 128px;
+  border: 3px solid #fff;
+  padding: 5%;
+  position: absolute;
+  justify-self: center;
+  z-index: 1;
+  background-color: #f6f6f6;
+}
+.l-about .content .about-content .about-date {
+  grid-row-start: 4;
+  max-width: 90vw;
+  position: absolute;
+  justify-self: center;
+}
+
 /**
 *
 * header.scss
@@ -398,7 +603,9 @@
   display: block;
   position: absolute;
   cursor: pointer;
+  left: 5%;
   top: 2.5%;
+  z-index: 2;
   -webkit-animation: rotate 0.5s ease-in-out;
           animation: rotate 0.5s ease-in-out;
 }
@@ -413,7 +620,6 @@
 }
 .l-header__nav .open {
   left: 5%;
-  z-index: 1;
   -webkit-animation: menu-btn-arrives 1s ease-in-out;
           animation: menu-btn-arrives 1s ease-in-out;
 }
@@ -440,7 +646,6 @@
 }
 .l-header__nav .close {
   left: 85%;
-  z-index: 1;
   -webkit-animation: menu-btn-leaves 1s ease-in-out;
           animation: menu-btn-leaves 1s ease-in-out;
 }
@@ -467,7 +672,9 @@
   width: 100%;
   height: 100vh;
   background-image: url("/images/background.svg");
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -477,8 +684,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 30%;
-  -webkit-animation: rise 0.5s ease-in-out;
-          animation: rise 0.5s ease-in-out;
+  z-index: 1;
 }
 .l-header__nav .menu-buttons a {
   margin-top: 10%;
@@ -489,21 +695,23 @@
   font-family: sans-serif;
   font-weight: 700;
 }
+.l-header__nav .init {
+  visibility: hidden;
+  top: 100vh;
+}
+.l-header__nav .rise {
+  top: 0.000001vh;
+  visibility: visible;
+  -webkit-animation: rise 0.5s ease-in-out;
+          animation: rise 0.5s ease-in-out;
+}
+.l-header__nav .dawn {
+  top: 100vh;
+  visibility: hidden;
+  -webkit-animation: dawn 0.5s ease-in-out;
+          animation: dawn 0.5s ease-in-out;
+}
 
-/**
-* landing.scss
-*
-* This is the Landing Layout were we try to impress the
-* user and make him to stay. So it's important to use
-* shapes and colors that make him feel confortable and
-* transmit all the emotions and ideas that we think would
-* help us to make him trust on us and give us a job.
-*
-* - Use white color to transmit trust.
-* - Use black color to transmit being elegant, formal, slick or modern.
-* - Use blue color to transmit stability and confidence.
-* - Use rounded corners, they are easier on the eyes.
-/*  Layout landing  */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

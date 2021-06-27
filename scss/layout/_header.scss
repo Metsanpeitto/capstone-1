@@ -20,7 +20,9 @@
       display: block;
       position: absolute;
       cursor: pointer;
+      left: 5%;
       top: 2.5%;
+      z-index: 2;
       animation: rotate 0.5s ease-in-out;
 
       div {
@@ -38,7 +40,6 @@
 
     .open {
       left: 5%;
-      z-index: 1;
       animation: menu-btn-arrives 1s ease-in-out;
 
       .line-1 {
@@ -63,8 +64,7 @@
     // This class is used when the menu modal is open
     // It overrides the configuration of 'menu-btn'
     .close {
-    left: 85%;
-      z-index: 1;
+      left: 85%;
       animation: menu-btn-leaves 1s ease-in-out;
 
       .line-1 {
@@ -90,13 +90,13 @@
       width: 100%;
       height: 100vh;
       background-image: url('/images/background.svg');
-      //display: flex;
-      display: none;
+      display: flex;
       flex-direction: column;
       position: fixed;
       align-items: flex-start;
-      padding-top: 30%;
-      animation: rise 0.5s ease-in-out;
+      padding-top: 30%;     
+      z-index: 1;
+
 
       a {
         margin-top: 10%;
@@ -107,6 +107,24 @@
         font-family: sans-serif;
         font-weight: 700;
       }
+    }
+
+    .init {
+      visibility: hidden;
+            top: 100vh;
+    }
+
+    .rise {
+      top: 0.000001vh;
+       visibility: visible;
+      animation: rise 0.5s ease-in-out;
+
+    }
+
+    .dawn {
+      top: 100vh;
+      visibility: hidden;
+      animation: dawn 0.5s ease-in-out;
     }
   }
 }

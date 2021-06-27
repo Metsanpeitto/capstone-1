@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(
     if (entries[0].isIntersecting === true) {
       // After knowing if the section is visible, the applyBorder function
       // will set the style propperty border bottom to the desired button.
-      applyBorder(elementId);
+      // applyBorder(elementId)
     }
   },
   { threshold: [0] },
@@ -62,15 +62,21 @@ observer.observe(document.querySelector('#speakers'));
 function handleClickMenu(e) {
   const menu = document.getElementById('menu-buttons');
   const menuBtn = document.getElementById('menu-btn');
-  console.log(e.currentTarget);
-  if (menu.style.display === 'flex') {
-    menu.style.display = 'none';
-    menuBtn.classList.remove('close');
-    menuBtn.classList.add('open');
-  } else {
-    menu.style.display = 'flex';
+  if (menu.classList.contains('dawn') || menu.classList.contains('init')) {
+    console.log(e.currentTarget);
+
     menuBtn.classList.remove('open');
     menuBtn.classList.add('close');
+    menu.classList.add('rise');
+    menu.classList.remove('dawn');
+    menu.classList.remove('init');
+  } else {
+    console.log(e.currentTarget);
+
+    menuBtn.classList.remove('close');
+    menu.classList.remove('rise');
+    menuBtn.classList.add('open');
+    menu.classList.add('dawn');
   }
   console.log(menuBtn.classList);
 }
