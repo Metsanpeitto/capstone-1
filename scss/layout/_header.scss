@@ -1,0 +1,112 @@
+/**
+*
+* header.scss
+*
+* One of the fundamental parts of a website.
+* It includes:
+* - Navigation bar
+* - Logo
+* - Menu button
+ layout header  */
+
+.l-header {
+  .logo-text {
+    font-family: 'cocogoose_proregular', sans-serif;
+    display: none;
+  }
+
+  &__nav {
+    .menu-btn {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      top: 2.5%;
+      animation: rotate 0.5s ease-in-out;
+
+      div {
+        width: 36px;
+        height: 5px;
+        margin-bottom: 5px;
+        display: block;
+        background-color: $color-primary;
+        position: relative;
+        left: 5%;
+      }
+    }
+    // This class is used when the menu modal is close
+    // It appears always that the open class is apply
+
+    .open {
+      left: 5%;
+      z-index: 1;
+      animation: menu-btn-arrives 1s ease-in-out;
+
+      .line-1 {
+        background-color: $color-primary;
+        transform: translateY(0px) rotate(0deg);
+        animation: line-1-arrives 1s ease-in-out;
+      }
+
+      .line-2 {
+        display: block;
+        transform: translateY(0px) rotate(0deg);
+        animation: line-2-arrives 1s ease-in-out;
+      }
+
+      .line-3 {
+        background-color: $color-primary;
+        transform: translateY(0px) rotate(0deg);
+        animation: line-3-arrives 1s ease-in-out;
+      }
+    }
+
+    // This class is used when the menu modal is open
+    // It overrides the configuration of 'menu-btn'
+    .close {
+    left: 85%;
+      z-index: 1;
+      animation: menu-btn-leaves 1s ease-in-out;
+
+      .line-1 {
+        background-color: $color-secondary;
+        transform: translateY(11px) rotate(45deg);
+        animation: line-1-leaves 1s ease-in-out;
+      }
+
+      .line-2 {
+        display: none;
+        animation: line-2-leaves 1s ease-in-out;
+      }
+
+      .line-3 {
+        background-color: $color-secondary;
+        transform: translateY(0px) rotate(-45deg);
+
+        animation: line-3-leaves 1s ease-in-out;
+      }
+    }
+
+    .menu-buttons {
+      width: 100%;
+      height: 100vh;
+      background-image: url('/images/background.svg');
+      //display: flex;
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      align-items: flex-start;
+      padding-top: 30%;
+      animation: rise 0.5s ease-in-out;
+
+      a {
+        margin-top: 10%;
+        margin-left: 10%;
+        font-size: 24px;
+        text-decoration: unset;
+        color: $color-secondary;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+}

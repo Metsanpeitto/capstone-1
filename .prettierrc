@@ -1,0 +1,10 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "rule-empty-line-before": true,
+  "at-rule-no-unknown": null,
+  "scss/at-rule-no-unknown": true,
+  "csstree/validator": true
+}

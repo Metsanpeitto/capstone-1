@@ -1,0 +1,119 @@
+/* -----------------------------------------------------------------------------------
+
+    Template Name: Portfolio
+    Description: This is a portfolio project. Built for Microverse.
+    Author: Abraham Rodriguez ( Abi )
+    Author URI: https://portfolio.waldenberginc.com
+
+-----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+   Folder Architecture
+
+   1._style
+   |
+   |
+   |
+   |___1.1 abstract
+   |              |
+   |              |
+   |              |___1.1.1 variables
+   |
+   |
+   |___1.2 base
+   |           |
+   |           |
+   |           |___1.2.1 animations
+   |           |
+   |           |
+   |           |___1.2.2 images
+   |           |
+   |           |
+   |           |___1.2.3 typography
+   |
+   |
+   |___1.3 components
+   |                 |
+   |                 |
+   |                 |___1.3.1 buttons
+   |
+   |
+   |___1.4 layout
+                 |
+                 |
+                 |___1.4.1 about
+                 |
+                 |
+                 |___1.4.2 header
+                 |
+                 |
+                 |___1.4.3 landing
+
+*/
+
+@import "abstract/variables";
+@import "base/animations";
+@import "base/images";
+@import "base/typography";
+@import "components/buttons";
+@import "layout/about";
+@import "layout/header";
+@import "layout/landing";
+
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: block;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 14px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: unset;
+  display: contents;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
+}
+
+main {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  overflow-y: hidden;
+  position: absolute;
+  -webkit-animation: rise 0.9s ease-in-out;
+  animation: rise 0.9s ease-in-out;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  font-family: "cocogoose_proregular", sans-serif;
+  font-style: normal;
+  filter: none;
+}
+
+/*  Desktop values  */
+
+@media only screen and (min-width: 1024px) {
+  main {
+    background-color: #e5e5e5;
+  }
+}

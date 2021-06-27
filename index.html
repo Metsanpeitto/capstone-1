@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DYN8RVNY7T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-DYN8RVNY7T')
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Abraham Rodriguez Portfolio</title>
+  </head>
+
+  <body>
+    <header class="l-header">
+      <!-- Navigation bar -->
+
+      <nav class="l-header__nav">
+        <a href="https://portfolio.waldenberginc.com" class="logo-text"
+          >My Logo</a
+        >
+
+        <div id="menu-btn" class="menu-btn">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+
+        <div id="menu-buttons" class="menu-buttons">
+          <a id="about-btn" href="#about" class="menu-button">About</a>
+          <a id="program-btn" href="#program" class="menu-button">Program</a>
+          <a id="speaker-btn" href="#speakers" class="menu-button">Speakers</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main section -->
+    <main>
+      <!-- Layout 1/3 - Landing -->
+      <section id="about" class="l-about">
+        <!-- The video -->
+        <video autoplay muted loop id="myVideo">
+          <source src="people.mp4" type="video/mp4" />
+        </video>
+      </section>
+      <!-- Layout 1/2 - Program -->
+      <section id="program" class="l-program"></section>
+      <!-- Layout 1/3 - Speakers -->
+      <section id="speakers" class="l-speakers"></section>
+    </main>
+    <script src="js/menu_handler.js"></script>
+  </body>
+</html>

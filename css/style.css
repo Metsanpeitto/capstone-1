@@ -1,0 +1,565 @@
+/* -----------------------------------------------------------------------------------
+
+    Template Name: Portfolio
+    Description: This is a portfolio project. Built for Microverse.
+    Author: Abraham Rodriguez ( Abi )
+    Author URI: https://portfolio.waldenberginc.com
+
+-----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+   Folder Architecture
+
+   1._style
+   |
+   |
+   |
+   |___1.1 abstract
+   |              |
+   |              |
+   |              |___1.1.1 variables
+   |
+   |
+   |___1.2 base
+   |           |
+   |           |
+   |           |___1.2.1 animations
+   |           |
+   |           |
+   |           |___1.2.2 images
+   |           |
+   |           |
+   |           |___1.2.3 typography
+   |
+   |
+   |___1.3 components
+   |                 |
+   |                 |
+   |                 |___1.3.1 buttons
+   |
+   |
+   |___1.4 layout
+                 |
+                 |
+                 |___1.4.1 about
+                 |
+                 |
+                 |___1.4.2 header
+                 |
+                 |
+                 |___1.4.3 landing
+
+*/
+@-webkit-keyframes rise {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0.000001vh;
+  }
+}
+@keyframes rise {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0.000001vh;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes line-1-arrives {
+  0% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes line-1-arrives {
+  0% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes line-1-leaves {
+  0% {
+    background-color: #272a31;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+}
+@keyframes line-1-leaves {
+  0% {
+    background-color: #272a31;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+}
+@-webkit-keyframes line-2-arrives {
+  0% {
+    opacity: unset;
+    -webkit-transform: translateX(-150vw);
+            transform: translateX(-150vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+}
+@keyframes line-2-arrives {
+  0% {
+    opacity: unset;
+    -webkit-transform: translateX(-150vw);
+            transform: translateX(-150vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+}
+@-webkit-keyframes line-2-leaves {
+  0% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-150vw);
+            transform: translateX(-150vw);
+  }
+}
+@keyframes line-2-leaves {
+  0% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-150vw);
+            transform: translateX(-150vw);
+  }
+}
+@-webkit-keyframes line-3-arrives {
+  0% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes line-3-arrives {
+  0% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes line-3-leaves {
+  0% {
+    background-color: #272a31;
+    -webkit-transform: translateY(11px) rotate(0deg);
+            transform: translateY(11px) rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(0px) rotate(-45deg);
+            transform: translateY(0px) rotate(-45deg);
+  }
+}
+@keyframes line-3-leaves {
+  0% {
+    background-color: #272a31;
+    -webkit-transform: translateY(11px) rotate(0deg);
+            transform: translateY(11px) rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    -webkit-transform: translateY(0px) rotate(-45deg);
+            transform: translateY(0px) rotate(-45deg);
+  }
+}
+@-webkit-keyframes menu-btn-arrives {
+  0% {
+    left: 85%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 5%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes menu-btn-arrives {
+  0% {
+    left: 85%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 5%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes menu-btn-leaves {
+  0% {
+    left: 5%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 85%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes menu-btn-leaves {
+  0% {
+    left: 5%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 85%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*
+*
+* images.scss
+*
+* This file contains all the images found in this project
+*
+*  - Global images
+*  - l-works
+*  - l-about
+*  - l-contact
+*
+******************
+
+/*   Global images  */
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on June 26, 2021 */
+@font-face {
+  font-family: "cocogoose_proregular";
+  src: url("./fonts/cocogoose_pro_ultralight_trial-webfont.woff2") format("woff2"), url("./fonts/cocogoose_pro_ultralight_trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cocogoose_proitalic";
+  src: url("./fonts/cocogoose_pro_ultralight_italic_trial-webfont.woff2") format("woff2"), url("./fonts/cocogoose_pro_ultralight_italic_trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cocogoose_proregular";
+  src: url("./fonts/cocogoose_pro_regular_trial-webfont.woff2") format("woff2"), url("./fonts/cocogoose_pro_regular_trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cocogoose_proregular";
+  src: url("./fonts/cocogoose_pro_light_trial-webfont.woff2") format("woff2"), url("./fonts/cocogoose_pro_light_trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latobold_italic";
+  src: url("./fonts/lato-bolditalic-webfont.woff2") format("woff2"), url("./fonts/lato-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latobold";
+  src: url("./fonts/lato-bold-webfont.woff2") format("woff2"), url("./fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latoitalic";
+  src: url("./fonts/lato-italic-webfont.woff2") format("woff2"), url("./fonts/lato-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latoregular";
+  src: url("./fonts/lato-regular-webfont.woff2") format("woff2"), url("./fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latolight_italic";
+  src: url("./fonts/lato-lightitalic-webfont.woff2") format("woff2"), url("./fonts/lato-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latolight";
+  src: url("./fonts/lato-light-webfont.woff2") format("woff2"), url("./fonts/lato-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+* buttons.scss
+*
+* Buttons, whatever their purpose, are important design elements.
+* They could be the end point of a Web form or a call to action.
+* Designers have many reasons to style buttons, including to make
+* them more attractive and to enhance usability.
+*
+* - Use white color to transmit trust.
+* - Use black color to transmit being elegant, formal, slick or modern.
+* - Use blue color to transmit stability and confidence.
+* - Use rounded corners, they are easier on the eyes.
+*
+*/
+/*  Component Buttons  */
+/**
+* about.scss
+*
+* This is the About Layout were we want to call for an action
+* from the client.
+* If the design from the other layouts have work as expected, and
+* we were able to build up the confidence and convey succesfully the
+* ideas and emotions that we want to transmit, now the user or potential
+* employer would want to hire as to solve his problems.
+*
+* Keep the same design rules than before and remember to make this layout
+* as simple and clean as possible. So the user don't have any distraction
+* or interference that could cost us lose the oportunity.
+ Layout about  */
+/**
+*
+* header.scss
+*
+* One of the fundamental parts of a website.
+* It includes:
+* - Navigation bar
+* - Logo
+* - Menu button
+ layout header  */
+.l-header .logo-text {
+  font-family: "cocogoose_proregular", sans-serif;
+  display: none;
+}
+.l-header__nav .menu-btn {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  top: 2.5%;
+  -webkit-animation: rotate 0.5s ease-in-out;
+          animation: rotate 0.5s ease-in-out;
+}
+.l-header__nav .menu-btn div {
+  width: 36px;
+  height: 5px;
+  margin-bottom: 5px;
+  display: block;
+  background-color: #272a31;
+  position: relative;
+  left: 5%;
+}
+.l-header__nav .open {
+  left: 5%;
+  z-index: 1;
+  -webkit-animation: menu-btn-arrives 1s ease-in-out;
+          animation: menu-btn-arrives 1s ease-in-out;
+}
+.l-header__nav .open .line-1 {
+  background-color: #272a31;
+  -webkit-transform: translateY(0px) rotate(0deg);
+          transform: translateY(0px) rotate(0deg);
+  -webkit-animation: line-1-arrives 1s ease-in-out;
+          animation: line-1-arrives 1s ease-in-out;
+}
+.l-header__nav .open .line-2 {
+  display: block;
+  -webkit-transform: translateY(0px) rotate(0deg);
+          transform: translateY(0px) rotate(0deg);
+  -webkit-animation: line-2-arrives 1s ease-in-out;
+          animation: line-2-arrives 1s ease-in-out;
+}
+.l-header__nav .open .line-3 {
+  background-color: #272a31;
+  -webkit-transform: translateY(0px) rotate(0deg);
+          transform: translateY(0px) rotate(0deg);
+  -webkit-animation: line-3-arrives 1s ease-in-out;
+          animation: line-3-arrives 1s ease-in-out;
+}
+.l-header__nav .close {
+  left: 85%;
+  z-index: 1;
+  -webkit-animation: menu-btn-leaves 1s ease-in-out;
+          animation: menu-btn-leaves 1s ease-in-out;
+}
+.l-header__nav .close .line-1 {
+  background-color: #ec5242;
+  -webkit-transform: translateY(11px) rotate(45deg);
+          transform: translateY(11px) rotate(45deg);
+  -webkit-animation: line-1-leaves 1s ease-in-out;
+          animation: line-1-leaves 1s ease-in-out;
+}
+.l-header__nav .close .line-2 {
+  display: none;
+  -webkit-animation: line-2-leaves 1s ease-in-out;
+          animation: line-2-leaves 1s ease-in-out;
+}
+.l-header__nav .close .line-3 {
+  background-color: #ec5242;
+  -webkit-transform: translateY(0px) rotate(-45deg);
+          transform: translateY(0px) rotate(-45deg);
+  -webkit-animation: line-3-leaves 1s ease-in-out;
+          animation: line-3-leaves 1s ease-in-out;
+}
+.l-header__nav .menu-buttons {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/background.svg");
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 30%;
+  -webkit-animation: rise 0.5s ease-in-out;
+          animation: rise 0.5s ease-in-out;
+}
+.l-header__nav .menu-buttons a {
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 24px;
+  text-decoration: unset;
+  color: #ec5242;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+/**
+* landing.scss
+*
+* This is the Landing Layout were we try to impress the
+* user and make him to stay. So it's important to use
+* shapes and colors that make him feel confortable and
+* transmit all the emotions and ideas that we think would
+* help us to make him trust on us and give us a job.
+*
+* - Use white color to transmit trust.
+* - Use black color to transmit being elegant, formal, slick or modern.
+* - Use blue color to transmit stability and confidence.
+* - Use rounded corners, they are easier on the eyes.
+/*  Layout landing  */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  display: block;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 14px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: unset;
+  display: contents;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
+}
+
+main {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  overflow-y: hidden;
+  position: absolute;
+  -webkit-animation: rise 0.9s ease-in-out;
+  animation: rise 0.9s ease-in-out;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "cocogoose_proregular", sans-serif;
+  font-style: normal;
+  -webkit-filter: none;
+          filter: none;
+}
+
+/*  Desktop values  */
+@media only screen and (min-width: 1024px) {
+  main {
+    background-color: #e5e5e5;
+  }
+}/*# sourceMappingURL=style.css.map */
