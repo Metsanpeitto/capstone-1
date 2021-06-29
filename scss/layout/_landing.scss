@@ -1,9 +1,19 @@
 /**
-* about.scss
+* landing.scss
 *
- Layout About  */
+* This is the Landing Layout were we want to call for an action
+* from the client.
+* If the design from the other layouts have work as expected, and
+* we were able to build up the confidence and convey succesfully the
+* ideas and emotions that we want to transmit, now the user or potential
+* employer would want to hire as to solve his problems.
+*
+* Keep the same design rules than before and remember to make this layout
+* as simple and clean as possible. So the user don't have any distraction
+* or interference that could cost us lose the oportunity.
+ Layout Landing  */
 
-.l-about {
+.l-landing {
   display: grid;
    display: none;
   width: 100%;
@@ -11,15 +21,22 @@
   position: relative;
   top: 0;
 
+  #myVideo {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    width: 140%;
+  }
+
   /* Add some content at the bottom of the video/page */
-  .about-content {
+  .content {
     position: absolute;
     background: #f6f6f6de;
     max-width: 100vw;
     height: 100vh;
     display: contents;
 
-    .about-content-2 {
+    .landing-content {
       max-width: 100vw;
       height: 100vh;
       background: linear-gradient(0deg, $color-gray-light, #f6f6f6e7);
@@ -28,79 +45,21 @@
       grid-template-columns: 100%;
       position: relative;
 
-      .matrix-large {
-        background-image: url(/images/matrix-large.svg);
+      .matrix {
+        background-image: url(/images/matrix.svg);
         background-size: contain;
         background-repeat: no-repeat;
-        grid-row-start: 2;
-        width: 180px;
-        height: 180px;
-        left: 5%;
-        top: 5%;
+        grid-row-start: 3;
+        width: 125px;
+        height: 125px;
+        left: 55%;
+        top: -10%;
         -webkit-transform: translateY(-40%);
         transform: translateY(-40%);
         z-index: 0;
         position: absolute;
         transform-origin: 50% 50%;
         animation: spin 50s ease-in-out infinite;
-        animation-direction: alternate-reverse;
-      }
-
-      .circle-black {
-        background-image: url(/images/circle-black.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        grid-row-start: 1;
-        width: 50px;
-        height: 50px;
-        left: 81%;
-        top: 5%;
-        -webkit-transform: translateY(-40%);
-        transform: translateY(-40%);
-        z-index: 0;
-        position: absolute;
-        transform-origin: 50% 50%;
-        animation: spin 50s ease-in-out infinite;
-        animation-direction: reverse;
-      }
-
-      .circle-red {
-        background-image: url(/images/circle-red.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 50px;
-        height: 50px;
-        left: 10%;
-        top: 2%;
-        -webkit-transform: translateY(-40%);
-        transform: translateY(-40%);
-        z-index: 0;
-        position: absolute;
-        transform-origin: 50% 50%;
-        animation: spin 50s ease-in-out infinite;
-      }
-
-      .circle-chess {
-        background-image: url(/images/circle-chess.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        grid-row-start: 2;
-        width: 50px;
-        height: 50px;
-        left: 83%;
-        top: 15%;
-        -webkit-transform: translateY(-40%);
-        transform: translateY(-40%);
-        z-index: 0;
-        position: absolute;
-        transform-origin: 50% 50%;
-        animation: spin 50s ease-in-out infinite;
-        animation-direction: alternate-reverse;
-      }
-
-      .circle-chess-1 {
-        left: 5%;
-        top: -5%;
       }
 
       .turn {
@@ -122,6 +81,7 @@
         background-repeat: no-repeat;
         width: 47px;
         height: 48px;
+
         left: 50%;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
@@ -137,6 +97,7 @@
         background-repeat: no-repeat;
         width: 30px;
         height: 24px;
+
         right: 10%;
         z-index: 0;
         position: absolute;
@@ -158,6 +119,7 @@
         background-repeat: no-repeat;
         width: 30px;
         height: 24px;
+
         left: 10%;
         z-index: 0;
         position: absolute;
@@ -192,16 +154,13 @@
         animation-delay: 7s;
       }
 
-      .about-section {
+      .hero-section {
         max-width: 80vw;
-        grid-row-start: 1;
+        grid-row-start: 2;
         position: absolute;
         justify-self: center;
-        margin-top: 20%;
 
         h3 {
-          text-align: center;
-          margin-bottom: 54px;
           color: $color-secondary;
         }
 
@@ -211,38 +170,23 @@
         }
       }
 
-      .about-parraf {
-        grid-row-start: 2;
+      .landing-parraf {
+        grid-row-start: 3;
         width: 85vw;
-        top: 20%;
-        display: flex;
-        border: 1px solid $color-tertiary;
+        height: 128px;
+        border: 3px solid $color-white;
         padding: 5%;
         position: absolute;
         justify-self: center;
         z-index: 1;
-        background-color: $color-white;
-        p {
-          text-align: center;
-        }
+        background-color: $color-gray-light;
       }
 
-      .about-date {
+      .landing-date {
         grid-row-start: 4;
         max-width: 90vw;
         position: absolute;
         justify-self: center;
-        text-align: center;
-        align-self: center;
-        h6 {
-          font-weight: 400;
-          font-size: 11px;
-          margin-bottom: 5%;
-        }
-        .email {
-          font-size: 12px;
-          font-weight: 600;
-        }
       }
     }
   }

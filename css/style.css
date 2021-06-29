@@ -44,10 +44,26 @@
                  |___1.4.1 about
                  |
                  |
-                 |___1.4.2 header
+                 |___1.4.2 footer                 
                  |
                  |
-                 |___1.4.3 landing
+                 |___1.4.3 header
+                 |
+                 |
+                 |___1.4.4 landing   
+                 |
+                 |
+                 |___1.4.5 logo   
+                 |
+                 |
+                 |___1.4.6 past                                 
+                 |
+                 |
+                 |___1.4.7 program
+                 |
+                 |
+                 |___1.4.8 speakers
+
 
 */
 @-webkit-keyframes rise {
@@ -296,6 +312,90 @@
             transform: rotate(0deg);
   }
 }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rain {
+  0% {
+    -webkit-transform: translateY(-5vh) rotate(0deg);
+            transform: translateY(-5vh) rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(100vh) rotate(360deg);
+            transform: translateY(100vh) rotate(360deg);
+  }
+}
+@keyframes rain {
+  0% {
+    -webkit-transform: translateY(-5vh) rotate(0deg);
+            transform: translateY(-5vh) rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(100vh) rotate(360deg);
+            transform: translateY(100vh) rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rain {
+  0% {
+    -webkit-transform: translateY(-5vh) rotate(0deg);
+            transform: translateY(-5vh) rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(100vh) rotate(360deg);
+            transform: translateY(100vh) rotate(360deg);
+  }
+}
 /*
 *
 * images.scss
@@ -417,42 +517,35 @@
 *
 */
 /*  Component Buttons  */
+.btn {
+  background-color: #ec5242;
+  color: #fff;
+  justify-self: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 /**
 * about.scss
 *
-* This is the About Layout were we want to call for an action
-* from the client.
-* If the design from the other layouts have work as expected, and
-* we were able to build up the confidence and convey succesfully the
-* ideas and emotions that we want to transmit, now the user or potential
-* employer would want to hire as to solve his problems.
-*
-* Keep the same design rules than before and remember to make this layout
-* as simple and clean as possible. So the user don't have any distraction
-* or interference that could cost us lose the oportunity.
- Layout about  */
+ Layout About  */
 .l-about {
-  display: contents;
+  display: grid;
+  display: none;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: relative;
   top: 0;
   /* Add some content at the bottom of the video/page */
 }
-.l-about #myVideo {
-  position: fixed;
-  right: 0;
-  opacity: 1;
-  width: 140%;
-}
-.l-about .content {
+.l-about .about-content {
   position: absolute;
   background: #f6f6f6de;
   max-width: 100vw;
   height: 100vh;
   display: contents;
 }
-.l-about .content .about-content {
+.l-about .about-content .about-content-2 {
   max-width: 100vw;
   height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, from(#f6f6f6), to(#f6f6f6e7));
@@ -462,127 +555,237 @@
   grid-template-columns: 100%;
   position: relative;
 }
-.l-about .content .about-content .matrix {
-  background-image: url(/images/matrix.svg);
+.l-about .about-content .about-content-2 .matrix-large {
+  background-image: url(/images/matrix-large.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  grid-row-start: 3;
-  width: 50%;
-  height: 25%;
-  left: 55%;
+  grid-row-start: 2;
+  width: 180px;
+  height: 180px;
+  left: 5%;
+  top: 5%;
   -webkit-transform: translateY(-40%);
   transform: translateY(-40%);
   z-index: 0;
   position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin 50s ease-in-out infinite;
+          animation: spin 50s ease-in-out infinite;
+  animation-direction: alternate-reverse;
 }
-.l-about .content .about-content .turn {
+.l-about .about-content .about-content-2 .circle-black {
+  background-image: url(/images/circle-black.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-row-start: 1;
+  width: 50px;
+  height: 50px;
+  left: 81%;
+  top: 5%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin 50s ease-in-out infinite;
+          animation: spin 50s ease-in-out infinite;
+  animation-direction: reverse;
+}
+.l-about .about-content .about-content-2 .circle-red {
+  background-image: url(/images/circle-red.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  left: 10%;
+  top: 2%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin 50s ease-in-out infinite;
+          animation: spin 50s ease-in-out infinite;
+}
+.l-about .about-content .about-content-2 .circle-chess {
+  background-image: url(/images/circle-chess.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-row-start: 2;
+  width: 50px;
+  height: 50px;
+  left: 83%;
+  top: 15%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin 50s ease-in-out infinite;
+          animation: spin 50s ease-in-out infinite;
+  animation-direction: alternate-reverse;
+}
+.l-about .about-content .about-content-2 .circle-chess-1 {
+  left: 5%;
+  top: -5%;
+}
+.l-about .about-content .about-content-2 .turn {
   background-image: url(/images/turn.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 25%;
-  top: 3%;
-  left: 55%;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
-  z-index: 0;
+  width: 30px;
+  height: 24px;
+  left: 25%;
   position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 16s ease-in-out infinite;
+          animation: rain 16s ease-in-out infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
-.l-about .content .about-content .chess {
+.l-about .about-content .about-content-2 .chess {
   background-image: url(/images/chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 25%;
-  top: 3%;
-  left: 55%;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
-  z-index: 0;
+  width: 47px;
+  height: 48px;
+  left: 50%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
   position: absolute;
+  -webkit-animation: rain 14s ease-in-out infinite;
+          animation: rain 14s ease-in-out infinite;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
-.l-about .content .about-content .cross {
+.l-about .about-content .about-content-2 .cross {
   background-image: url(/images/cross.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 25%;
-  top: 6%;
-  left: 55%;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
+  width: 30px;
+  height: 24px;
+  right: 10%;
   z-index: 0;
   position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 16s ease-in-out infinite;
+          animation: rain 16s ease-in-out infinite;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
-.l-about .content .about-content .o {
+.l-about .about-content .about-content-2 .cross-1 {
+  left: 10%;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 14s ease-in-out infinite;
+          animation: rain 14s ease-in-out infinite;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+.l-about .about-content .about-content-2 .o {
   background-image: url(/images/o.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 25%;
-  top: 50%;
-  left: 55%;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
+  width: 30px;
+  height: 24px;
+  left: 10%;
   z-index: 0;
   position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 10s ease-in-out infinite;
+          animation: rain 10s ease-in-out infinite;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
 }
-.l-about .content .about-content .dollar {
+.l-about .about-content .about-content-2 .dollar {
   background-image: url(/images/dollar.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 25%;
-  top: 5%;
-  left: 55%;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
-  z-index: 0;
+  width: 30px;
+  height: 24px;
+  right: 10%;
   position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 7s ease-in-out infinite;
+          animation: rain 7s ease-in-out infinite;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
 }
-.l-about .content .about-content .squares {
+.l-about .about-content .about-content-2 .squares {
   background-image: url(/images/squares.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 25%;
-  top: 10%;
-  left: 55%;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
-  z-index: 0;
+  width: 30px;
+  height: 24px;
+  right: 30%;
   position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 5s ease-in-out infinite;
+          animation: rain 5s ease-in-out infinite;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
-.l-about .content .about-content .hero-section {
+.l-about .about-content .about-content-2 .about-section {
   max-width: 80vw;
-  grid-row-start: 2;
+  grid-row-start: 1;
   position: absolute;
   justify-self: center;
+  margin-top: 20%;
 }
-.l-about .content .about-content .hero-section h3 {
+.l-about .about-content .about-content-2 .about-section h3 {
+  text-align: center;
+  margin-bottom: 54px;
   color: #ec5242;
 }
-.l-about .content .about-content .hero-section img {
+.l-about .about-content .about-content-2 .about-section img {
   width: 105%;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
 }
-.l-about .content .about-content .about-parraf {
-  grid-row-start: 3;
+.l-about .about-content .about-content-2 .about-parraf {
+  grid-row-start: 2;
   width: 85vw;
-  height: 128px;
-  border: 3px solid #fff;
+  top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #d3d3d3;
   padding: 5%;
   position: absolute;
   justify-self: center;
   z-index: 1;
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
-.l-about .content .about-content .about-date {
+.l-about .about-content .about-content-2 .about-parraf p {
+  text-align: center;
+}
+.l-about .about-content .about-content-2 .about-date {
   grid-row-start: 4;
   max-width: 90vw;
   position: absolute;
   justify-self: center;
+  text-align: center;
+  align-self: center;
+}
+.l-about .about-content .about-content-2 .about-date h6 {
+  font-weight: 400;
+  font-size: 11px;
+  margin-bottom: 5%;
+}
+.l-about .about-content .about-content-2 .about-date .email {
+  font-size: 12px;
+  font-weight: 600;
 }
 
 /**
@@ -605,7 +808,7 @@
   cursor: pointer;
   left: 5%;
   top: 2.5%;
-  z-index: 2;
+  z-index: 3;
   -webkit-animation: rotate 0.5s ease-in-out;
           animation: rotate 0.5s ease-in-out;
 }
@@ -672,6 +875,8 @@
   width: 100%;
   height: 100vh;
   background-image: url("/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,7 +889,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 30%;
-  z-index: 1;
+  z-index: 2;
 }
 .l-header__nav .menu-buttons a {
   margin-top: 10%;
@@ -710,6 +915,530 @@
   visibility: hidden;
   -webkit-animation: dawn 0.5s ease-in-out;
           animation: dawn 0.5s ease-in-out;
+}
+
+/**
+* landing.scss
+*
+* This is the Landing Layout were we want to call for an action
+* from the client.
+* If the design from the other layouts have work as expected, and
+* we were able to build up the confidence and convey succesfully the
+* ideas and emotions that we want to transmit, now the user or potential
+* employer would want to hire as to solve his problems.
+*
+* Keep the same design rules than before and remember to make this layout
+* as simple and clean as possible. So the user don't have any distraction
+* or interference that could cost us lose the oportunity.
+ Layout Landing  */
+.l-landing {
+  display: grid;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  /* Add some content at the bottom of the video/page */
+}
+.l-landing #myVideo {
+  position: absolute;
+  right: 0;
+  opacity: 1;
+  width: 140%;
+}
+.l-landing .content {
+  position: absolute;
+  background: #f6f6f6de;
+  max-width: 100vw;
+  height: 100vh;
+  display: contents;
+}
+.l-landing .content .landing-content {
+  max-width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6f6f6), to(#f6f6f6e7));
+  background: linear-gradient(0deg, #f6f6f6, #f6f6f6e7);
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 100%;
+  position: relative;
+}
+.l-landing .content .landing-content .matrix {
+  background-image: url(/images/matrix.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-row-start: 3;
+  width: 125px;
+  height: 125px;
+  left: 55%;
+  top: -10%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 0;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin 50s ease-in-out infinite;
+          animation: spin 50s ease-in-out infinite;
+}
+.l-landing .content .landing-content .turn {
+  background-image: url(/images/turn.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 24px;
+  left: 25%;
+  position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 16s ease-in-out infinite;
+          animation: rain 16s ease-in-out infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.l-landing .content .landing-content .chess {
+  background-image: url(/images/chess.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 47px;
+  height: 48px;
+  left: 50%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  position: absolute;
+  -webkit-animation: rain 14s ease-in-out infinite;
+          animation: rain 14s ease-in-out infinite;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.l-landing .content .landing-content .cross {
+  background-image: url(/images/cross.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 24px;
+  right: 10%;
+  z-index: 0;
+  position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 16s ease-in-out infinite;
+          animation: rain 16s ease-in-out infinite;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+.l-landing .content .landing-content .cross-1 {
+  left: 10%;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 14s ease-in-out infinite;
+          animation: rain 14s ease-in-out infinite;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+.l-landing .content .landing-content .o {
+  background-image: url(/images/o.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 24px;
+  left: 10%;
+  z-index: 0;
+  position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 10s ease-in-out infinite;
+          animation: rain 10s ease-in-out infinite;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+.l-landing .content .landing-content .dollar {
+  background-image: url(/images/dollar.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 24px;
+  right: 10%;
+  position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 7s ease-in-out infinite;
+          animation: rain 7s ease-in-out infinite;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
+}
+.l-landing .content .landing-content .squares {
+  background-image: url(/images/squares.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 24px;
+  right: 30%;
+  position: absolute;
+  -webkit-transform: translateY(-50vh);
+          transform: translateY(-50vh);
+  -webkit-animation: rain 5s ease-in-out infinite;
+          animation: rain 5s ease-in-out infinite;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.l-landing .content .landing-content .hero-section {
+  max-width: 80vw;
+  grid-row-start: 2;
+  position: absolute;
+  justify-self: center;
+}
+.l-landing .content .landing-content .hero-section h3 {
+  color: #ec5242;
+}
+.l-landing .content .landing-content .hero-section img {
+  width: 105%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+}
+.l-landing .content .landing-content .landing-parraf {
+  grid-row-start: 3;
+  width: 85vw;
+  height: 128px;
+  border: 3px solid #fff;
+  padding: 5%;
+  position: absolute;
+  justify-self: center;
+  z-index: 1;
+  background-color: #f6f6f6;
+}
+.l-landing .content .landing-content .landing-date {
+  grid-row-start: 4;
+  max-width: 90vw;
+  position: absolute;
+  justify-self: center;
+}
+
+.l-logo {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10%;
+}
+.l-logo .logo-title {
+  text-align: center;
+  margin-top: 25%;
+}
+.l-logo .logo-title h3 {
+  margin-bottom: 10%;
+  font-weight: 600;
+}
+.l-logo .logo-title .red-line-logo {
+  grid-row-start: 1;
+  width: 45px;
+  height: 2px;
+  background-color: #ec5242;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.l-logo .logo-title h6 {
+  font-weight: 400;
+  font-size: 11px;
+  margin-bottom: 5%;
+}
+.l-logo .logo-card {
+  border: 2px solid #f6f6f6;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  padding: 10%;
+}
+.l-logo .logo-card img {
+  width: 18%;
+}
+.l-logo .logo-card h1 {
+  font-size: 30px;
+  line-height: 28px;
+  letter-spacing: -2px;
+}
+
+.l-past {
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 40px auto auto;
+  row-gap: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 5%;
+  padding-top: 10%;
+}
+.l-past .past-title {
+  text-align: center;
+  grid-row-start: 1;
+}
+.l-past .past-title h3 {
+  margin-bottom: 5%;
+  font-weight: 600;
+}
+.l-past .past-title .red-line-past {
+  grid-row-start: 1;
+  width: 45px;
+  height: 2px;
+  background-color: #ec5242;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+.l-past .past-title h6 {
+  margin-bottom: 5%;
+}
+.l-past .image {
+  width: 100%;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+}
+.l-past .image .picture-overlay {
+  width: 90%;
+  height: 160px;
+  position: absolute;
+  background-color: #ff000059;
+  z-index: 1;
+}
+.l-past .image img {
+  width: 90%;
+  height: 160px;
+  position: absolute;
+}
+.l-past .image h3 {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  width: 90%;
+  z-index: 2;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+.l-past .image h6 {
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.l-program {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  display: none;
+  grid-template-rows: repeat(7, auto);
+  position: relative;
+  padding: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.l-program .program-background {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/images/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* z-index: 1; */
+  position: absolute;
+}
+.l-program .program-title {
+  justify-self: center;
+}
+.l-program .program-title h3 {
+  color: #fff;
+  font-size: 28px;
+  grid-row-start: 1;
+  position: relative;
+  justify-self: center;
+}
+.l-program .program-title .red-line {
+  grid-row-start: 1;
+  width: 45px;
+  height: 2px;
+  background-color: #ec5242;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+}
+.l-program .card {
+  width: 95%;
+  height: 75%;
+  background-color: #e5e5e521;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 15% 25% 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2%;
+  padding-left: 5%;
+  padding-right: 1%;
+}
+.l-program .card img {
+  width: 50px;
+  height: 50px;
+  grid-column-start: 1;
+}
+.l-program .card h4 {
+  grid-column-start: 2;
+  text-align: start;
+  padding: 10%;
+  color: #ec5242;
+  font-size: 14px;
+}
+.l-program .card p {
+  padding-left: 5%;
+  grid-column-start: 3;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+}
+.l-program .btn {
+  background-color: #ec5242;
+  border: unset;
+  color: #fff;
+  grid-row-start: 7;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  justify-self: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.l-speakers {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+  position: relative;
+  padding: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.l-speakers .speakers-title {
+  justify-self: center;
+}
+.l-speakers .speakers-title h3 {
+  color: #272a31;
+  font-size: 28px;
+  grid-row-start: 1;
+  position: relative;
+  justify-self: center;
+}
+.l-speakers .speakers-title .red-line {
+  grid-row-start: 1;
+  width: 45px;
+  height: 2px;
+  background-color: #ec5242;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+}
+.l-speakers .cards {
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+.l-speakers .cards .card {
+  align-self: end;
+  width: 95%;
+  height: 160px;
+  border-color: 2px solid black;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  position: relative;
+  margin-bottom: 20%;
+}
+.l-speakers .cards .card .images {
+  grid-column-start: 1;
+}
+.l-speakers .cards .card .images .chess-black {
+  max-width: 25%;
+  max-height: 25%;
+  position: absolute;
+}
+.l-speakers .cards .card .images .speaker {
+  max-width: 70%;
+  max-height: 70%;
+  position: relative;
+  left: 10%;
+  top: 8%;
+  z-index: 1;
+}
+.l-speakers .cards .card .text {
+  grid-column-start: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.l-speakers .cards .card .text h3 {
+  color: #272a31;
+  margin-bottom: 2%;
+}
+.l-speakers .cards .card .text h6 {
+  color: #ec5242;
+  margin-bottom: 2%;
+  font-size: 12px;
+  font-weight: 400;
+}
+.l-speakers .cards .card .text .gray-line {
+  width: 22px;
+  height: 1px;
+  background-color: #d3d3d3;
+  position: relative;
+  margin-bottom: 2%;
+}
+.l-speakers .cards .card .text p {
+  font-size: 10px;
+}
+.l-speakers .btn-2 {
+  width: 95%;
+  height: 55px;
+  background-color: white;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+.l-speakers .btn-2 img {
+  margin-left: 5%;
+  cursor: pointer;
 }
 
 * {

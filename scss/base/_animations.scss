@@ -151,3 +151,59 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+  }
+
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+  }
+
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}

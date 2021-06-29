@@ -14,3 +14,12 @@
 */
 
 /*  Component Buttons  */
+
+
+  .btn {
+    background-color: $color-secondary;
+    color: $color-white;
+    justify-self: center;
+    font-size: 20px;
+    font-weight: 600;
+  }

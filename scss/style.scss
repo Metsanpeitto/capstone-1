@@ -44,10 +44,26 @@
                  |___1.4.1 about
                  |
                  |
-                 |___1.4.2 header
+                 |___1.4.2 footer                 
                  |
                  |
-                 |___1.4.3 landing
+                 |___1.4.3 header
+                 |
+                 |
+                 |___1.4.4 landing   
+                 |
+                 |
+                 |___1.4.5 logo   
+                 |
+                 |
+                 |___1.4.6 past                                 
+                 |
+                 |
+                 |___1.4.7 program
+                 |
+                 |
+                 |___1.4.8 speakers
+
 
 */
 
@@ -57,7 +73,13 @@
 @import "base/typography";
 @import "components/buttons";
 @import "layout/about";
+@import "layout/footer.scss";
 @import "layout/header";
+@import "layout/landing";
+@import "layout/logo";
+@import "layout/past";
+@import "layout/program";
+@import "layout/speakers";
 
 
 

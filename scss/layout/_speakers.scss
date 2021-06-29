@@ -1,0 +1,105 @@
+.l-speakers {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+  position: relative;
+  padding: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  .speakers-title {
+    justify-self: center;
+    h3 {
+      color: $color-primary;
+      font-size: 28px;
+      grid-row-start: 1;
+      position: relative;
+      justify-self: center;
+    }
+
+    .red-line {
+      grid-row-start: 1;
+      width: 45px;
+      height: 2px;
+      background-color: $color-secondary;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 5%;
+    }
+  }
+
+  .cards {
+     align-self: end;
+    .card {
+      align-self: end;
+      width: 95%;
+      height: 160px;
+      border-color: 2px solid black;
+      justify-self: center;
+      display: grid;
+      grid-template-columns: 25% 75%;
+      position: relative;
+      margin-bottom: 20%;
+      .images {
+        grid-column-start: 1;
+        .chess-black {
+          max-width: 25%;
+          max-height: 25%;
+          position: absolute;
+        }
+        .speaker {
+          max-width: 70%;
+          max-height: 70%;
+          position: relative;
+          left: 10%;
+          top: 8%;
+          z-index: 1;
+        }
+      }
+      .text {
+        grid-column-start: 2;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          color: $color-primary;
+          margin-bottom: 2%;
+        }
+
+        h6 {
+          color: $color-secondary;
+          margin-bottom: 2%;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .gray-line {
+          width: 22px;
+          height: 1px;
+          background-color: $color-tertiary;
+          position: relative;
+          margin-bottom: 2%;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .btn-2 {
+    width: 95%;
+    height: 55px;
+    background-color: white;
+    border: 1px solid $color-tertiary;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: end;
+    img {
+      margin-left: 5%;
+      cursor: pointer;
+    }
+  }
+}

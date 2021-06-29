@@ -1,0 +1,91 @@
+.l-program {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  display: none;
+  grid-template-rows: repeat(7, auto);
+  position: relative;
+  padding: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  .program-background {
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: 1; */
+    position: absolute;
+  }
+
+  .program-title {
+    justify-self: center;
+    h3 {
+      color: $color-white;
+      font-size: 28px;
+      grid-row-start: 1;
+      position: relative;
+      justify-self: center;
+    }
+
+    .red-line {
+      grid-row-start: 1;
+      width: 45px;
+      height: 2px;
+      background-color: $color-secondary;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 15%;
+    }
+  }
+
+  .card {
+    width: 95%; 
+    height: 75%;   
+    background-color: #e5e5e521;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 15% 25% 60%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 1%;
+
+    img {
+      width: 50px;
+      height: 50px;
+      grid-column-start: 1;
+    }
+    h4 {
+      grid-column-start: 2;
+      text-align: start;
+      padding: 10%;
+      color: $color-secondary;
+      font-size: 14px;
+    }
+    p {
+      padding-left: 5%;
+      grid-column-start: 3;
+      color: $color-white;
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+
+  .btn {
+    background-color: $color-secondary;
+    border: unset;
+    color: $color-white;
+    grid-row-start: 7;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    justify-self: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
