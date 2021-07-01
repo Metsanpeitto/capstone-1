@@ -1075,14 +1075,15 @@ p {
 .l-footer {
   background-color: #272a31;
   width: 100%;
-  height: 100vh;
+  height: 45vh;
   display: grid;
-  grid-template-rows: 10% 75% 15%;
+  grid-template-rows: 10vh 20vh 15vh;
   position: relative;
 }
 .l-footer .footer-title {
   justify-self: center;
-  padding: 10%;
+  -ms-flex-item-align: center;
+      align-self: center;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -1098,25 +1099,36 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 5vh;
+  padding-top: 0%;
 }
 .l-footer .logos img {
-  width: 30%;
-  margin: 2%;
+  width: 23%;
+  margin: 4%;
+}
+.l-footer .logos img:nth-child(1) {
+  margin-right: 5%;
+}
+.l-footer .logos img:nth-child(3) {
+  margin-left: 5%;
 }
 .l-footer .logos .google {
-  width: 25%;
+  width: 17%;
 }
 .l-footer .footbar {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.l-footer .footbar img {
+.l-footer .footbar .footbar-img {
   width: 45%;
   padding-left: 5%;
 }
-.l-footer .footbar img:nth-child(2) {
+.l-footer .footbar .footbar-img:nth-child(2) {
   display: none;
 }
 .l-footer .footbar h6 {
