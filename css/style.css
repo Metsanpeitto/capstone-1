@@ -2051,7 +2051,7 @@ p {
 .l-program .program-background {
   height: 110vh;
   width: 100%;
-  background-image: url("/images/background.svg");
+  background-image: url("../images/background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
