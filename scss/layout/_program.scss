@@ -7,6 +7,7 @@
   padding: 10%;
   padding-left: 2%;
   padding-right: 2%;
+
   .program-background {
     height: 110vh;
     width: 100%;
@@ -18,6 +19,7 @@
 
   .program-title {
     justify-self: center;
+
     h3 {
       color: $color-white;
       font-size: 18px;
@@ -67,11 +69,12 @@
       color: $color-secondary;
       font-size: 14px;
     }
+
     p {
       padding-left: 5%;
       grid-column-start: 3;
       color: $color-white;
-      font-family: 'Lato';
+      font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
       font-size: 10px;
       font-weight: 600;
     }
@@ -98,15 +101,18 @@
     .program-background {
       height: 65vh;
     }
+
     .program-title {
       align-self: center;
       grid-column-start: 3;
       grid-column-end: 6;
       grid-row-start: 1;
+
       h3 {
         font-size: 28px;
       }
     }
+
     .card {
       align-self: end;
       grid-row-start: 2;
@@ -114,18 +120,23 @@
       grid-template-rows: 100px auto auto;
       height: 300px;
       padding: 2%;
+
       &:nth-child(3) {
         grid-column-start: 2;
       }
+
       &:nth-child(4) {
         grid-column-start: 3;
       }
+
       &:nth-child(5) {
         grid-column-start: 4;
       }
+
       &:nth-child(6) {
         grid-column-start: 5;
       }
+
       &:nth-child(7) {
         grid-column-start: 6;
       }
@@ -138,6 +149,7 @@
         width: 60px;
         justify-self: center;
       }
+
       h4 {
         padding: unset;
         font-size: 22px;
@@ -146,6 +158,7 @@
         grid-row-start: 2;
         text-align: center;
       }
+
       p {
         height: 45px;
         align-self: start;
@@ -174,6 +187,7 @@
       text-decoration: underline;
       cursor: pointer;
     }
+
     .btn {
       display: none;
     }
@@ -183,9 +197,8 @@
 @media (min-width: 1024px) {
   .l-program {
     .program-title {
-
-   
       grid-row-start: 1;
+
       h3 {
         font-size: 28px;
       }
@@ -196,6 +209,5 @@
         line-height: 24px;
       }
     }
-
   }
 }

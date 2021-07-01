@@ -1,5 +1,17 @@
+/* ====================================================
+ *  Speaker Generator
+ *  - This is the group of functions needed to handle
+ *  the dynamic creation of the 'speakers section'.
+ *   To propperly work it requires of a data object
+ *  called 'speakers' and imported from './data_speakers.js'
+ *  The data from that object will be injected in the
+ *  different functions resulting in the finale template
+ * ====================================================
+ */
+/**  This data object contains all the information about every individual speaker */
 import speakers from './data_speakers.js';
 
+/**  This functions generates a single group with the data injeted in it */
 function groupFiller(speakers) {
   const group = `          <div class=${speakers[0].group}>
             <div class="card">
@@ -51,6 +63,7 @@ function groupFiller(speakers) {
   return group;
 }
 
+/**  This constant contains the reference to the Html object section 'speakers' */
 const speakersSection = document.getElementById('speakers');
 
 function filler() {
@@ -74,15 +87,16 @@ function filler() {
          
         </div>
         <div class="buttons">
-          <button id="button-mobile-speakers-more" class="btn-2">
-            MORE<img src="./images/arrow-down.svg" alt="arrow-down" />
+          <button id="button-mobile-speakers-more" class="btn-2 btn-more">
+            MORE<img class="btn-arrow-down" src="./images/arrow-down.svg" alt="arrow-down" />
           </button>
-          <button id="button-mobile-speakers-less" class="btn-2 less">
-            LESS<img src="./images/arrow-down.svg" alt="arrow-up" />
+          <button id="button-mobile-speakers-less" class="btn-2 less btn-less">
+            LESS<img class="btn-arrow-up" src="./images/arrow-down.svg" alt="arrow-up" />
           </button>
         </div>`;
 
   speakersSection.innerHTML += template;
 }
 
+/**  Calling filler when the document loads will run the generator   */
 filler();

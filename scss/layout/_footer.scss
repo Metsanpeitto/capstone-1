@@ -39,6 +39,7 @@
     img {
       width: 45%;
       padding-left: 5%;
+
       &:nth-child(2) {
         display: none;
       }
@@ -143,6 +144,7 @@
         &:nth-child(1) {
           display: none;
         }
+
         &:nth-child(2) {
           display: block;
         }

@@ -61,6 +61,7 @@ function handleClickMoreSpeakers(e) {
       group2[0].style.display = 'none';
     }
     groupsOnScreen -= 1;
+    document.getElementById('speakers').scrollIntoView();
   }
 }
 

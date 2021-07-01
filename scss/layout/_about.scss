@@ -221,7 +221,7 @@
           display: none;
         }
 
-        img {
+        .about-img {
           width: 105%;
           transform: translateY(-25%);
         }
@@ -241,7 +241,6 @@
 
         p {
           color: $color-gray-dark;
-
           text-align: center;
         }
 
@@ -269,7 +268,7 @@
             font-weight: 600;
           }
 
-          img {
+          .about-img-2 {
             display: none;
           }
         }
@@ -374,7 +373,7 @@
           display: none;
         }
 
-        img {
+        .about-img {
           grid-row-start: 1;
           width: 720px;
           transform: unset;
@@ -411,6 +410,7 @@
       .about-date {
         grid-row-start: 3;
         margin-top: 5%;
+
         h5 {
           font-weight: 400;
           margin-bottom: 2.5%;
@@ -418,13 +418,14 @@
 
         div {
           display: inline-flex;
+
           .email {
             cursor: pointer;
             font-size: 14px;
             text-decoration: underline;
           }
 
-          img {
+          .about-img-2 {
             cursor: pointer;
             display: block;
             margin-left: 5%;

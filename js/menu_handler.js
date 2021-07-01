@@ -6,9 +6,7 @@
  *   buttons
  * ====================================================
  */
-function handleClickMenu(e) {
-  console.log(e.currentTarget);
-
+function handleClickMenu() {
   const menu = document.getElementById('menu-buttons');
   const menuBtn = document.getElementById('menu-btn');
   const main = document.getElementById('main');
@@ -26,7 +24,6 @@ function handleClickMenu(e) {
     }
     main2.style.display = 'none';
   } else {
-    console.log(e.currentTarget);
     menuBtn.classList.remove('close');
     menu.classList.remove('rise');
     menuBtn.classList.add('open');
@@ -36,7 +33,6 @@ function handleClickMenu(e) {
     }
     main2.style.display = 'block';
   }
-  console.log(menuBtn.classList);
 }
 
 const menuBtn = document.getElementById('menu-btn');

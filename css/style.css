@@ -44,26 +44,25 @@
                  |___1.4.1 about
                  |
                  |
-                 |___1.4.2 footer                 
+                 |___1.4.2 footer
                  |
                  |
                  |___1.4.3 header
                  |
                  |
-                 |___1.4.4 landing   
+                 |___1.4.4 landing
                  |
                  |
-                 |___1.4.5 logo   
+                 |___1.4.5 logo
                  |
                  |
-                 |___1.4.6 past                                 
+                 |___1.4.6 past
                  |
                  |
                  |___1.4.7 program
                  |
                  |
                  |___1.4.8 speakers
-
 
 */
 @-webkit-keyframes rise {
@@ -88,8 +87,8 @@
             transform: translateY(-20vh);
   }
   100% {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @keyframes set {
@@ -98,8 +97,8 @@
             transform: translateY(-20vh);
   }
   100% {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @keyframes rise {
@@ -204,8 +203,8 @@
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @keyframes line-2-arrives {
@@ -216,16 +215,16 @@
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @-webkit-keyframes line-2-leaves {
   0% {
     display: block;
     opacity: 1;
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     opacity: 1;
@@ -237,8 +236,8 @@
   0% {
     display: block;
     opacity: 1;
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     opacity: 1;
@@ -276,8 +275,8 @@
   }
   100% {
     background-color: #ec5242;
-    -webkit-transform: translateY(0px) rotate(-45deg);
-            transform: translateY(0px) rotate(-45deg);
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
   }
 }
 @keyframes line-3-leaves {
@@ -288,8 +287,8 @@
   }
   100% {
     background-color: #ec5242;
-    -webkit-transform: translateY(0px) rotate(-45deg);
-            transform: translateY(0px) rotate(-45deg);
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
   }
 }
 @-webkit-keyframes menu-btn-arrives {
@@ -438,48 +437,6 @@
 ******************
 
 /*   Global images  */
-@font-face {
-  font-family: "cocogoose_proitalic";
-  src: url("./fonts/cocogoose_pro_ultralight_italic_trial-webfont.woff2") format("woff2"), url("./fonts/cocogoose_pro_ultralight_italic_trial-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latobold_italic";
-  src: url("./fonts/lato-bolditalic-webfont.woff2") format("woff2"), url("./fonts/lato-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latobold";
-  src: url("./fonts/lato-bold-webfont.woff2") format("woff2"), url("./fonts/lato-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latoitalic";
-  src: url("./fonts/lato-italic-webfont.woff2") format("woff2"), url("./fonts/lato-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latoregular";
-  src: url("./fonts/lato-regular-webfont.woff2") format("woff2"), url("./fonts/lato-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latolight_italic";
-  src: url("./fonts/lato-lightitalic-webfont.woff2") format("woff2"), url("./fonts/lato-lightitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latolight";
-  src: url("./fonts/lato-light-webfont.woff2") format("woff2"), url("./fonts/lato-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 h1 {
   font-size: 42px;
   line-height: 44px;
@@ -496,7 +453,7 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-weight: 400;
 }
 
@@ -544,7 +501,7 @@ p {
   h3 {
     font-size: 20px;
     line-height: 22px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   h4 {
@@ -587,7 +544,7 @@ p {
   h3 {
     font-size: 36px;
     line-height: 22px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     font-weight: 400;
   }
 
@@ -636,14 +593,6 @@ p {
 /*  Component Buttons  */
 .btn {
   background-color: #ec5242;
-  color: #fff;
-  justify-self: center;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.btn {
-  background-color: #ec5242;
   border: unset;
   color: #fff;
   grid-row-start: 7;
@@ -673,8 +622,8 @@ p {
           transform: scale(0.8);
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
           box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn-3 {
@@ -932,7 +881,7 @@ p {
 .l-about .about-content .about-content-2 .about-section .red-line {
   display: none;
 }
-.l-about .about-content .about-content-2 .about-section img {
+.l-about .about-content .about-content-2 .about-section .about-img {
   width: 105%;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
@@ -974,7 +923,7 @@ p {
   font-size: 12px;
   font-weight: 600;
 }
-.l-about .about-content .about-content-2 .about-date div img {
+.l-about .about-content .about-content-2 .about-date div .about-img-2 {
   display: none;
 }
 
@@ -1065,7 +1014,7 @@ p {
   .l-about .about-content .about-content-2 .about-section h1 {
     display: none;
   }
-  .l-about .about-content .about-content-2 .about-section img {
+  .l-about .about-content .about-content-2 .about-section .about-img {
     grid-row-start: 1;
     width: 720px;
     -webkit-transform: unset;
@@ -1113,7 +1062,7 @@ p {
     font-size: 14px;
     text-decoration: underline;
   }
-  .l-about .about-content .about-content-2 .about-date div img {
+  .l-about .about-content .about-content-2 .about-date div .about-img-2 {
     cursor: pointer;
     display: block;
     margin-left: 5%;
@@ -1285,7 +1234,11 @@ p {
 .l-header .top-bar .group {
   display: none;
 }
-.l-header .top-bar .group img {
+.l-header .top-bar .group .header-img {
+  margin: 1%;
+  height: 18px;
+}
+.l-header .top-bar .group .header-img-2 {
   margin: 1%;
   height: 18px;
 }
@@ -1295,7 +1248,7 @@ p {
 }
 .l-header__nav {
   /* This class is used when the menu modal is open
-    It overrides the configuration of 'menu-btn'*/
+    It overrides the configuration of 'menu-btn' */
 }
 .l-header__nav .menu-btn {
   display: block;
@@ -1323,22 +1276,22 @@ p {
 }
 .l-header__nav .open .line-1 {
   background-color: #272a31;
-  -webkit-transform: translateY(0px) rotate(0deg);
-          transform: translateY(0px) rotate(0deg);
+  -webkit-transform: translateY(0) rotate(0deg);
+          transform: translateY(0) rotate(0deg);
   -webkit-animation: line-1-arrives 1s ease-in-out;
           animation: line-1-arrives 1s ease-in-out;
 }
 .l-header__nav .open .line-2 {
   display: block;
-  -webkit-transform: translateY(0px) rotate(0deg);
-          transform: translateY(0px) rotate(0deg);
+  -webkit-transform: translateY(0) rotate(0deg);
+          transform: translateY(0) rotate(0deg);
   -webkit-animation: line-2-arrives 1s ease-in-out;
           animation: line-2-arrives 1s ease-in-out;
 }
 .l-header__nav .open .line-3 {
   background-color: #272a31;
-  -webkit-transform: translateY(0px) rotate(0deg);
-          transform: translateY(0px) rotate(0deg);
+  -webkit-transform: translateY(0) rotate(0deg);
+          transform: translateY(0) rotate(0deg);
   -webkit-animation: line-3-arrives 1s ease-in-out;
           animation: line-3-arrives 1s ease-in-out;
 }
@@ -1362,8 +1315,8 @@ p {
 }
 .l-header__nav .close .line-3 {
   background-color: #ec5242;
-  -webkit-transform: translateY(0px) rotate(-45deg);
-          transform: translateY(0px) rotate(-45deg);
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
   -webkit-animation: line-3-leaves 1s ease-in-out;
           animation: line-3-leaves 1s ease-in-out;
 }
@@ -1430,7 +1383,7 @@ p {
     height: 32px;
     background-color: #272a31;
     color: #fff;
-    font-family: "Lato";
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
     z-index: 1;
     position: relative;
   }
@@ -1453,7 +1406,11 @@ p {
     margin-right: 1%;
     cursor: pointer;
   }
-  .l-header .top-bar .group a img {
+  .l-header .top-bar .group a .header-img {
+    height: 16px;
+    color: #fff;
+  }
+  .l-header .top-bar .group a .header-img-2 {
     height: 16px;
     color: #fff;
   }
@@ -1479,7 +1436,7 @@ p {
             align-items: center;
     grid-column-start: 3;
   }
-  .l-header__nav .logo-text img {
+  .l-header__nav .logo-text .header-img-3 {
     height: 48px;
   }
   .l-header .menu-btn {
@@ -1505,7 +1462,10 @@ p {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .l-header .menu-buttons a {
+  .l-header .menu-buttons .active {
+    color: #ec5242 !important;
+  }
+  .l-header .menu-buttons .menu-button {
     font-size: 14px;
     color: #464646;
     margin-top: unset;
@@ -1696,7 +1656,7 @@ p {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 .l-landing .content .landing-content .hero-section img {
   width: 105%;
@@ -2152,7 +2112,7 @@ p {
   padding-left: 5%;
   grid-column-start: 3;
   color: #fff;
-  font-family: "Lato";
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10px;
   font-weight: 600;
 }
@@ -2307,20 +2267,10 @@ p {
       align-self: center;
   position: relative;
 }
-.l-speakers .cards .group-1 {
-  display: block;
-}
-.l-speakers .cards .group-2 {
-  display: none;
-}
-.l-speakers .cards .group-3 {
-  display: none;
-}
 .l-speakers .cards .card {
   align-self: end;
   width: 95%;
   height: 160px;
-  border-color: 2px solid black;
   justify-self: center;
   display: grid;
   grid-template-columns: 25% 75%;
@@ -2379,6 +2329,15 @@ p {
   margin-top: 5%;
   margin-bottom: 10%;
 }
+.l-speakers .cards .group-1 {
+  display: block;
+}
+.l-speakers .cards .group-2 {
+  display: none;
+}
+.l-speakers .cards .group-3 {
+  display: none;
+}
 .l-speakers .buttons {
   width: 95%;
   margin-left: auto;
@@ -2410,7 +2369,7 @@ p {
 .l-speakers .less {
   display: none;
 }
-.l-speakers .less img {
+.l-speakers .less .btn-arrow-up {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -2441,34 +2400,6 @@ p {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 15% 33% 33% 33% 15%;
-  }
-  .l-speakers .cards .group-1 {
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    display: block;
-  }
-  .l-speakers .cards .group-2 {
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    display: block;
-  }
-  .l-speakers .cards .group-3 {
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .l-speakers .cards .group-3 .card {
-    margin-top: 8%;
-  }
-  .l-speakers .cards .group-3 .card:nth-child(2) {
-    margin-top: 8%;
-    margin-bottom: 0%;
   }
   .l-speakers .cards .card {
     -webkit-column-gap: 5%;
@@ -2505,12 +2436,40 @@ p {
   .l-speakers .cards .card .text h6 {
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
   .l-speakers .cards .card .text p {
     font-size: 12px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 14px;
+  }
+  .l-speakers .cards .group-1 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    display: block;
+  }
+  .l-speakers .cards .group-2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    display: block;
+  }
+  .l-speakers .cards .group-3 {
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .l-speakers .cards .group-3 .card {
+    margin-top: 8%;
+  }
+  .l-speakers .cards .group-3 .card:nth-child(2) {
+    margin-top: 8%;
+    margin-bottom: 0%;
   }
 
   .btn-2 {
@@ -2519,15 +2478,15 @@ p {
 }
 @media (min-width: 1024px) {
   .l-speakers .cards .card .text h6 {
-    font-family: "Lato";
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
     font-size: 16px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   .l-speakers .cards .card .text p {
     font-size: 16px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 20px;
   }
 }

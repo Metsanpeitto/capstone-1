@@ -17,14 +17,6 @@
 
 .btn {
   background-color: $color-secondary;
-  color: $color-white;
-  justify-self: center;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.btn {
-  background-color: $color-secondary;
   border: unset;
   color: $color-white;
   grid-row-start: 7;
@@ -34,6 +26,7 @@
   justify-self: center;
   font-size: 12px;
   font-weight: 600;
+
   &:active {
     transform: scale(0.9);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
@@ -49,7 +42,7 @@
   &:active {
     transform: scale(0.8);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -61,9 +54,10 @@
   position: relative;
   width: 120px;
   height: 42px;
+
   &:active {
-    transform: scale(0.8);   
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);  
+    transform: scale(0.8);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
     transition: all 0.5s ease-in-out;
   }
 }

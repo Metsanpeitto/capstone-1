@@ -38,10 +38,18 @@
       <div class="top-bar">
         <div class="group">
           <a href="https://facebook.com">
-            <img src="./images/facebook1.svg" alt="facebook logo" />
+            <img
+              class="header-img"
+              src="./images/facebook1.svg"
+              alt="facebook logo"
+            />
           </a>
           <a href="https://twitter.com">
-            <img src="./images/Vector.svg" alt="twitter logo" />
+            <img
+              class="header-img-2"
+              src="./images/Vector.svg"
+              alt="twitter logo"
+            />
           </a>
 
           <h6>English</h6>
@@ -51,7 +59,10 @@
       </div>
       <nav class="l-header__nav">
         <a href="https://portfolio.waldenberginc.com" class="logo-text">
-          <img src="./images/small-logo.svg" alt="cc korea logo"
+          <img
+            class="header-img-3"
+            src="./images/small-logo.svg"
+            alt="cc korea logo"
         /></a>
 
         <div id="menu-btn" class="menu-btn">
@@ -61,26 +72,21 @@
         </div>
 
         <div id="menu-buttons" class="menu-buttons init">
-          <a
-            id="home-btn"
-            href="index.html"
-            class="menu-button"
-            style="color: #ec5242"
-            >Home</a
-          >
+          <a id="home-btn" href="index.html" class="menu-button active">Home</a>
           <a id="about-btn" href="about.html" class="menu-button">About</a>
           <a id="program-btn" href="#program" class="menu-button">Program</a>
           <a id="join-btn" href="#join" class="menu-button">Join</a>
           <a id="sponsor-btn" href="#sponsor" class="menu-button">Sponsor</a>
           <a id="news-btn" href="#news" class="menu-button">News</a>
-          <button class="btn btn-3">CC Campaign</button>
+          <button type="button" class="btn btn-3">CC Campaign</button>
         </div>
       </nav>
     </header>
 
     <!-- Main section -->
     <main id="main">
-      <!-- Layout 1/3 - Landing -->
+      <!-- Layout 1/4 - Landing -->
+
       <section id="landing" class="l-landing">
         <video autoplay muted loop id="myVideo">
           <source src="./images/people.mp4" type="video/mp4" />
@@ -120,14 +126,18 @@
           </div>
         </div>
       </section>
-      <!-- Layout 1/2 - Program -->
+
+      <!-- Layout 2/4 - Program -->
+
       <section id="program" class="l-program">
+        <!-- Backgroun Image -->
         <div class="program-background"></div>
+        <!-- Block 1/3 Title Section -->
         <div class="program-title">
           <h3>Main Program</h3>
           <div class="red-line"></div>
         </div>
-
+        <!-- Block 2/3 Cards Section -->
         <div class="card">
           <img src="./images/conference-.svg" alt="conference" />
           <h4>Lecture</h4>
@@ -137,7 +147,7 @@
           </p>
         </div>
         <div class="card">
-          <img src="./images/canvas.svg" alt="canvas" />
+          <img class="speakers-img" src="./images/canvas.svg" alt="canvas" />
           <h4>CC Exhibition</h4>
           <p>
             Appreciate various creations applying CC license of artists,
@@ -145,7 +155,11 @@
           </p>
         </div>
         <div class="card">
-          <img src="./images/conversation.svg" alt="conversation" />
+          <img
+            class="speakers-img-2"
+            src="./images/conversation.svg"
+            alt="conversation"
+          />
           <h4>Forum</h4>
           <p>
             Have the time to share your thoughts and opinions with experts for
@@ -153,7 +167,11 @@
           </p>
         </div>
         <div class="card">
-          <img src="./images/blackboard.svg" alt="blackboard" />
+          <img
+            class="speakers-btn-img-1"
+            src="./images/blackboard.svg"
+            alt="blackboard"
+          />
           <h4>Workshop</h4>
           <p>
             Try creating your own work usin open source license rather than just
@@ -161,26 +179,34 @@
           </p>
         </div>
         <div class="card">
-          <img src="./images/network.svg" alt="network" />
+          <img
+            class="speakers-btn-img-1"
+            src="./images/network.svg"
+            alt="network"
+          />
           <h4>CC Ignite</h4>
           <p>
             Get opportunities to network with CC affiliates around the world,
             also after the summit
           </p>
         </div>
+        <!-- Block 3/3 Action Section -->
         <h4 class="desktop-link">SEE THE WHOLE PROGRAM</h4>
-        <button class="btn">Join CC Global Summit 2015</button>
+        <button type="button" class="btn">Join CC Global Summit 2015</button>
       </section>
 
-      <!-- Layout 1/3 - Speakers -->
+      <!-- Layout 3/4 - Speakers -->
 
-      <section id="speakers" class="l-speakers"></section>
-      <!-- Layout 6/ - Footer -->
-      <section id="footer" class="l-footer">
+      <section id="speakers" class="l-speakers" aria-label="speakers"></section>
+
+      <!-- Layout 4/4 - Footer -->
+      <section id="footer" class="l-footer" aria-label="footer">
+        <!-- Block 1/3 Title Section -->
         <div class="footer-title">
           <h3>Partner</h3>
           <div class="red-line"></div>
         </div>
+        <!-- Block 2/3 Logos Section -->
         <div class="logos">
           <img src="./images/mozilla.svg" alt="logo mozilla" />
           <img class="google" src="./images/google.svg" alt="logo google" />
@@ -188,6 +214,7 @@
           <img src="./images/daumkakao.svg" alt="logo kakao" />
           <img src="./images/airbnb.svg" alt="logo airbnb" />
         </div>
+        <!-- Block 3/3 Contact Section -->
         <div class="footbar">
           <img src="./images/ccLogo.svg" alt="logo of cc korea" />
           <h6>

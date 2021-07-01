@@ -2,6 +2,13 @@
 
 ![Alt text](images/screenshot.png?raw=true 'Optional Title')
 
+# Disclaimer!
+
+This website is an Original design idea by Cindy Shin in Behance.
+Visit her profile and send her some love for her amazing job!
+
+- [` https://www.behance.net/adagio07`](https://www.behance.net/adagio07)
+
 ## Learning objectives
 
 - Use semantic HTML tags.
