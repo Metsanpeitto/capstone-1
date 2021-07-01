@@ -1,0 +1,162 @@
+.l-footer {
+  background-color: $color-primary;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  position: relative;
+
+  .footer-title {
+    justify-self: center;
+    padding: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    h3 {
+      color: $color-white;
+    }
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      width: 30%;
+      margin: 2%;
+    }
+
+    .google {
+      width: 25%;
+    }
+  }
+
+  .footbar {
+    background-color: $color-white;
+    display: flex;
+
+    img {
+      width: 45%;
+      padding-left: 5%;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    h6 {
+      align-self: center;
+      padding-left: 1%;
+      margin-right: 4%;
+    }
+
+    .korean-text {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .l-footer {
+    height: 50vh;
+    grid-template-rows: 10vh 15vh 25vh;
+
+    .footer-title {
+      align-self: end;
+      justify-self: center;
+      padding: unset;
+
+      h3 {
+        font-size: 28px;
+      }
+
+      .red-line {
+        margin-top: 20%;
+      }
+    }
+
+    .logos {
+      align-content: center;
+
+      img {
+        width: 12%;
+        margin: 2%;
+      }
+
+      .google {
+        width: 12%;
+        margin: 2%;
+      }
+    }
+
+    .footbar {
+      display: grid;
+      grid-template-columns: 10% 30% 50% 10%;
+      grid-template-rows: 20% 30% 30% 20%;
+
+      img {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        width: 65%;
+        padding: unset;
+        justify-self: end;
+      }
+
+      h6 {
+        transform: translateY(50%);
+        grid-row-start: 2;
+        grid-column-start: 3;
+      }
+
+      h6 br {
+        display: none;
+      }
+
+      .korean-text {
+        transform: unset;
+        display: block;
+        grid-row-start: 3;
+        grid-column-start: 3;
+        align-self: start;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .about-footer {
+    height: 25vh;
+    grid-template-rows: 25vh;
+
+    .footer-title {
+      display: none;
+    }
+
+    .logos {
+      display: none;
+    }
+
+    .footbar {
+      background-color: $color-primary;
+
+      img {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+
+      h6 {
+        color: $color-white;
+        font-weight: 400;
+      }
+
+      .korean-text {
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+}

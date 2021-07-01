@@ -18,6 +18,38 @@
   }
 }
 
+@-webkit-keyframes set {
+  0% {
+transform: translateY(-20vh);
+  }
+
+  100% {
+transform: translateY(0vh);
+  }
+}
+
+@keyframes set {
+  0% {
+transform: translateY(-20vh);
+  }
+
+  100% {
+transform: translateY(0vh);
+  }
+}
+
+@keyframes rise {
+  0% {
+    top: 20vh;
+  }
+
+  100% {
+    top: 0.000001vh;
+  }
+}
+
+
+
 @-webkit-keyframes dawn {
   0% {
     top: 0.000001vh;

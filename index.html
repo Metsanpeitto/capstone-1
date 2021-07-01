@@ -28,17 +28,31 @@
       rel="stylesheet"
     />
     <link href="./css/style.css" rel="stylesheet" />
-    <title>Abraham Rodriguez Portfolio</title>
+    <link rel="icon" href="./images/favicon.svg" />
+    <title>CC Global Summit</title>
   </head>
 
   <body>
     <header class="l-header">
       <!-- Navigation bar -->
+      <div class="top-bar">
+        <div class="group">
+          <a href="https://facebook.com">
+            <img src="./images/facebook1.svg" alt="facebook logo" />
+          </a>
+          <a href="https://twitter.com">
+            <img src="./images/Vector.svg" alt="twitter logo" />
+          </a>
 
+          <h6>English</h6>
+          <h6>My Page</h6>
+          <h6>Logout</h6>
+        </div>
+      </div>
       <nav class="l-header__nav">
-        <a href="https://portfolio.waldenberginc.com" class="logo-text"
-          >My Logo</a
-        >
+        <a href="https://portfolio.waldenberginc.com" class="logo-text">
+          <img src="./images/small-logo.svg" alt="cc korea logo"
+        /></a>
 
         <div id="menu-btn" class="menu-btn">
           <div class="line-1"></div>
@@ -47,16 +61,25 @@
         </div>
 
         <div id="menu-buttons" class="menu-buttons init">
-          <a id="landing-btn" href="#landing" class="menu-button">Home</a>
+          <a
+            id="home-btn"
+            href="index.html"
+            class="menu-button"
+            style="color: #ec5242"
+            >Home</a
+          >
+          <a id="about-btn" href="about.html" class="menu-button">About</a>
           <a id="program-btn" href="#program" class="menu-button">Program</a>
-          <a id="speaker-btn" href="#speakers" class="menu-button">Speakers</a>
-          <a id="about-btn" href="#about" class="menu-button">About</a>
+          <a id="join-btn" href="#join" class="menu-button">Join</a>
+          <a id="sponsor-btn" href="#sponsor" class="menu-button">Sponsor</a>
+          <a id="news-btn" href="#news" class="menu-button">News</a>
+          <button class="btn btn-3">CC Campaign</button>
         </div>
       </nav>
     </header>
 
     <!-- Main section -->
-    <main>
+    <main id="main">
       <!-- Layout 1/3 - Landing -->
       <section id="landing" class="l-landing">
         <video autoplay muted loop id="myVideo">
@@ -75,7 +98,7 @@
             <div class="cross cross-1"></div>
             <!-- Block 1/3 Hero Section -->
             <div class="hero-section">
-              <h3>"Hello Sharing World"</h3>
+              <h1>"Hello! Sharing world"</h1>
               <img
                 src="./images/hero-text.png"
                 alt="Creative commons global summit 2015"
@@ -117,7 +140,7 @@
           <img src="./images/canvas.svg" alt="canvas" />
           <h4>CC Exhibition</h4>
           <p>
-            Appricate various creations applying CC license of artists,
+            Appreciate various creations applying CC license of artists,
             organized from Art Center Nabi
           </p>
         </div>
@@ -145,177 +168,43 @@
             also after the summit
           </p>
         </div>
+        <h4 class="desktop-link">SEE THE WHOLE PROGRAM</h4>
         <button class="btn">Join CC Global Summit 2015</button>
       </section>
 
       <!-- Layout 1/3 - Speakers -->
 
-      <section id="speakers" class="l-speakers">
-        <div class="speakers-title">
-          <h3>Featured Speakers</h3>
+      <section id="speakers" class="l-speakers"></section>
+      <!-- Layout 6/ - Footer -->
+      <section id="footer" class="l-footer">
+        <div class="footer-title">
+          <h3>Partner</h3>
           <div class="red-line"></div>
         </div>
-        <div class="cards">
-          <div class="card">
-            <div class="images">
-              <img
-                class="chess-black"
-                src="./images/chess-black.svg"
-                alt="chess"
-              />
-              <img
-                class="speaker"
-                src="./images/image1.png"
-                alt="speaker-picture"
-              />
-            </div>
-            <div class="text">
-              <h3>Yochal Benkler</h3>
-              <h6>
-                Berkman Professor of Entrepenurial Legal Studies at Harvard Law
-                School
-              </h6>
-              <div class="gray-line"></div>
-              <p>
-                Benkler studies commons-based peer production, andpublished his
-                seminal book The Wealth of Networks in
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="images">
-              <img
-                class="chess-black"
-                src="./images/chess-black.svg"
-                alt="chess"
-              />
-              <img
-                class="speaker"
-                src="./images/image.png"
-                alt="speaker-picture"
-              />
-            </div>
-            <div class="text">
-              <h3>SohYeong Noh</h3>
-              <h6>
-                Director of Art Centre Nabi and a board member of CC Korea
-              </h6>
-              <div class="gray-line"></div>
-              <p>
-                As the main venue for media art production in Korea, Nabi
-                promotes cross-disciplinary collaboration and understanding
-                among science technology, humanities and the arts.
-              </p>
-            </div>
-          </div>
+        <div class="logos">
+          <img src="./images/mozilla.svg" alt="logo mozilla" />
+          <img class="google" src="./images/google.svg" alt="logo google" />
+          <img src="./images/naver.svg" alt="logo naver" />
+          <img src="./images/daumkakao.svg" alt="logo kakao" />
+          <img src="./images/airbnb.svg" alt="logo airbnb" />
         </div>
-        <button class="btn-2">
-          MORE<img src="./images/arrow-down.svg" alt="arrow-down" />
-        </button>
-      </section>
-
-      <!-- Layout 4/3 - About -->
-
-      <section class="l-about">
-        <div class="about-content">
-          <div class="about-content-2">
-            <!-- Background Images -->
-
-            <div class="circle-black"></div>
-            <div class="circle-chess"></div>
-            <div class="circle-chess circle-chess-1"></div>
-            <div class="circle-red"></div>
-            <div class="matrix-large"></div>
-            <div class="turn"></div>
-            <div class="chess"></div>
-            <div class="cross"></div>
-            <div class="o"></div>
-            <div class="dollar"></div>
-            <div class="squares"></div>
-            <div class="cross cross-1"></div>
-            <!-- Block 1/3 Hero Section -->
-            <div class="about-section">
-              <h3>"Hello Sharing World"</h3>
-              <img
-                src="./images/about-text.svg"
-                alt="Creative commons global summit 2015"
-              />
-            </div>
-            <!-- Block 2/3 Parraf  -->
-            <div class="about-parraf">
-              <p>
-                The Global Summit brings together the community of
-                experts,academics, and activists who comprise the Creative
-                Commons affiliate network in a different country every two.
-                Thisb year, we hope to expand our invitation list including
-                organizations and individuals.
-              </p>
-            </div>
-            <!-- Block 3/3 Date -->
-            <div class="about-date">
-              <h6>
-                Please contact us per Email for any further questions about CC
-                Global Summit 2015!
-              </h6>
-              <h6 class="email">ccsummit2015@cckorea.org</h6>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Layout 5/ - About -->
-      <section id="logo" class="l-logo">
-        <div class="logo-title">
-          <h3>Creative Commons Global Summit 2015 Logo</h3>
-          <div class="red-line-logo"></div>
+        <div class="footbar">
+          <img src="./images/ccLogo.svg" alt="logo of cc korea" />
           <h6>
-            Please contact us per Email for any further questions about CC
-            Global Summit 2015!
+            2015 Creative Commons Korea <br />
+            Some Rights Reserved
+          </h6>
+          <h6 class="korean-text">
+            년, 한국에서 활동을 시작한지 11년 되는 해에 사단법인 크리에이티브
+            커먼즈 코리아는 사단법인 코드(C.O.D.E.)라는 새로운 이름으로
+            전환하였습니다.재점검하기 위함이z
+            http://creativecommons.org/licenses/by/2.0/ 었습니다.
           </h6>
         </div>
-        <div class="logo-card">
-          <img src="./images/logo-cc.svg" />
-          <div class="logo-text">
-            <h1>
-              CC Global <br />
-              Summit 2015
-            </h1>
-            <div class="line-gray-logo"></div>
-            <h6>14th - 17th Oct 2015 | Seoul, Korea</h6>
-            <div class="line-gray-logo logo-line-2"></div>
-          </div>
-        </div>
       </section>
-
-      <!-- Layout 6/ - Past -->
-      <section id="past" class="l-past">
-        <div class="past-title">
-          <h3>See the past CC Global Summits</h3>
-          <div class="red-line-past"></div>
-          <h6>
-            Take a look at the last two CC Global Summits which took place in
-            Buenos Aires and in Warsaw
-          </h6>
-        </div>
-        <div class="image">
-          <div class="picture-overlay"></div>
-          <img
-            src="./images/past-submit.jpg"
-            alt="picture of the past submit"
-          />
-          <h3>2013</h3>
-          <h6>CC Global Summit 2013 in Buenos Aires</h6>
-        </div>
-
-        <div class="image">
-          <img src="./images/submit.jpg" alt="picture of the submit" />
-          <h3>2013</h3>
-          <h6>CC Global Summit 2013 in Buenos Aires</h6>
-        </div>
-      </section>
-
-      <!-- Layout 6/ - Footer -->
-      <section id="footer" class="l-footer"></section>
     </main>
+    <script type="module" src="js/speaker_generator.js"></script>
+    <script src="js/speakers_handler.js"></script>
     <script src="js/menu_handler.js"></script>
   </body>
 </html>

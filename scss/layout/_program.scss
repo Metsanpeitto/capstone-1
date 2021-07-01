@@ -1,20 +1,18 @@
 .l-program {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: grid;
-  display: none;
-  grid-template-rows: repeat(7, auto);
+  grid-template-rows: 10vh 15vh 15vh 15vh 15vh 15vh 20vh;
   position: relative;
   padding: 10%;
   padding-left: 2%;
   padding-right: 2%;
   .program-background {
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-image: url('/images/background.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* z-index: 1; */
     position: absolute;
   }
 
@@ -22,7 +20,7 @@
     justify-self: center;
     h3 {
       color: $color-white;
-      font-size: 28px;
+      font-size: 18px;
       grid-row-start: 1;
       position: relative;
       justify-self: center;
@@ -41,29 +39,31 @@
   }
 
   .card {
-    width: 95%; 
-    height: 75%;   
+    width: 95%;
+    height: 90%;
     background-color: #e5e5e521;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 15% 25% 60%;
+    grid-template-columns: 15% 30% 55%;
     align-items: center;
     justify-content: flex-start;
     padding: 2%;
-    padding-left: 5%;
+    padding-left: 2%;
     padding-right: 1%;
 
     img {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       grid-column-start: 1;
+      justify-self: center;
     }
+
     h4 {
       grid-column-start: 2;
       text-align: start;
-      padding: 10%;
+      padding-left: 15%;
       color: $color-secondary;
       font-size: 14px;
     }
@@ -71,21 +71,131 @@
       padding-left: 5%;
       grid-column-start: 3;
       color: $color-white;
+      font-family: 'Lato';
       font-size: 10px;
       font-weight: 600;
     }
   }
 
+  .desktop-link {
+    display: none;
+  }
+
   .btn {
-    background-color: $color-secondary;
-    border: unset;
-    color: $color-white;
-    grid-row-start: 7;
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    justify-self: center;
-    font-size: 12px;
-    font-weight: 600;
+    align-self: center;
+    height: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .l-program {
+    height: 65vh;
+    padding: unset;
+    grid-template-columns: 5% 18% 18% 18% 18% 18% 5%;
+    grid-template-rows: 15vh 35vh 15vh;
+    background-color: $color-white;
+
+    .program-background {
+      height: 65vh;
+    }
+    .program-title {
+      align-self: center;
+      grid-column-start: 3;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      h3 {
+        font-size: 28px;
+      }
+    }
+    .card {
+      align-self: end;
+      grid-row-start: 2;
+      grid-template-columns: unset;
+      grid-template-rows: 100px auto auto;
+      height: 300px;
+      padding: 2%;
+      &:nth-child(3) {
+        grid-column-start: 2;
+      }
+      &:nth-child(4) {
+        grid-column-start: 3;
+      }
+      &:nth-child(5) {
+        grid-column-start: 4;
+      }
+      &:nth-child(6) {
+        grid-column-start: 5;
+      }
+      &:nth-child(7) {
+        grid-column-start: 6;
+      }
+
+      img {
+        align-self: end;
+        grid-column-start: unset;
+        grid-row-start: 1;
+        height: 60px;
+        width: 60px;
+        justify-self: center;
+      }
+      h4 {
+        padding: unset;
+        font-size: 22px;
+        font-weight: 600;
+        grid-column-start: unset;
+        grid-row-start: 2;
+        text-align: center;
+      }
+      p {
+        height: 45px;
+        align-self: start;
+        padding: unset;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        line-height: 14px;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-weight: 400;
+        grid-column-start: unset;
+        grid-row-start: 3;
+        text-align: center;
+      }
+    }
+
+    .desktop-link {
+      display: block;
+      align-self: center;
+      grid-column-start: 3;
+      grid-column-end: 6;
+      grid-row-start: 3;
+      color: white;
+      z-index: 1;
+      text-align: center;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .btn {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .l-program {
+    .program-title {
+
+   
+      grid-row-start: 1;
+      h3 {
+        font-size: 28px;
+      }
+    }
+
+    .card {
+      p {
+        line-height: 24px;
+      }
+    }
+
   }
 }

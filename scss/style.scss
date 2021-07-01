@@ -127,15 +127,38 @@ main {
   width: 100%;
   overflow-x: hidden;
   justify-content: center;
-  font-family: "cocogoose_proregular", sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   filter: none;
 }
 
-/*  Desktop values  */
+    .red-line {
+      grid-row-start: 1;
+      width: 45px;
+      height: 2px;
+      background-color: #ec5242;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
 
-@media only screen and (min-width: 1024px) {
+/*  Desktop values  */
+@media (min-width: 768px) {
+  .red-line {
+      grid-row-start: 1;
+      width: 45px;
+      height: 2px;
+      background-color: #ec5242;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 15%;
+      margin-bottom: 10%;
+    }
   main {
     background-color: #e5e5e5;
   }
 }
+

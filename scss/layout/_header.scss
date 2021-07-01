@@ -10,6 +10,16 @@
  layout header  */
 
 .l-header {
+  .top-bar {
+    display: none;
+    .group {
+      display: none;
+      img {
+        margin: 1%;
+        height: 18px;
+      }
+    }
+  }
   .logo-text {
     font-family: 'cocogoose_proregular', sans-serif;
     display: none;
@@ -61,12 +71,12 @@
       }
     }
 
-    // This class is used when the menu modal is open
-    // It overrides the configuration of 'menu-btn'
+    /* This class is used when the menu modal is open
+      It overrides the configuration of 'menu-btn'*/
     .close {
       left: 85%;
       animation: menu-btn-leaves 1s ease-in-out;
-
+      position: fixed;
       .line-1 {
         background-color: $color-secondary;
         transform: translateY(11px) rotate(45deg);
@@ -96,7 +106,7 @@
       flex-direction: column;
       position: fixed;
       align-items: flex-start;
-      padding-top: 30%;
+      padding-top: 10%;
       z-index: 2;
 
       a {
@@ -107,6 +117,10 @@
         color: $color-secondary;
         font-family: sans-serif;
         font-weight: 700;
+      }
+
+      .btn-3 {
+        display: none;
       }
     }
 
@@ -125,6 +139,103 @@
       top: 100vh;
       visibility: hidden;
       animation: dawn 0.5s ease-in-out;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    position: fixed;
+    height: 48px;
+    display: contents;
+    top: 0.00000001vh;
+    z-index: 1;
+    .top-bar {
+      display: grid;
+      grid-template-columns: 5% 10% 20% 60% 5%;
+      width: 100%;
+      height: 32px;
+      background-color: $color-primary;
+      color: $color-white;
+      font-family: 'Lato';
+      z-index: 1;
+      position: relative;
+      .group {
+        height: 32px;
+        width: unset;
+        color: white;
+        display: flex;
+        grid-column-start: 4;
+        place-content: flex-end;
+        align-items: center;
+        margin-left: unset;
+
+        a {
+          margin-left: 1%;
+          margin-right: 1%;
+          cursor: pointer;
+          img {
+            height: 16px;
+            color: $color-white;
+          }
+        }
+
+        h6 {
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 12px;
+          margin-left: 1%;
+          margin-right: 1%;
+        }
+      }
+    }
+
+    &__nav {
+      background-color: white;
+      position: relative;
+      display: grid;
+      grid-template-columns: 5% 10% 20% 60% 5%;
+      z-index: 1;
+
+      .logo-text {
+        position: relative;
+        display: grid;
+        align-items: center;
+        grid-column-start: 3;
+        img {
+          height: 48px;
+        }
+      }
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    .menu-buttons {
+      align-items: center;
+      grid-column-start: 4;
+      visibility: visible;
+      position: relative;
+      height: 64px;
+      top: unset;
+      padding-top: unset;
+      background-color: white;
+      background-image: unset;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      a {
+        font-size: 14px;
+        color: $color-gray-dark;
+        margin-top: unset;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+
+      .btn-3 {
+        display: block;
+        cursor: pointer;
+        margin-left: 3%;
+      }
     }
   }
 }
