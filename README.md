@@ -44,11 +44,11 @@ Visit her profile and send her some love for her amazing job!
 
 If you want to visit the deployed app just visit the following link:
 
-- [`https://metsanpeitto.github.io/Portfolio_1/`](https://metsanpeitto.github.io/Portfolio_1/)
+- [`https://metsanpeitto.github.io/capstone-1/index.html`](https://metsanpeitto.github.io/capstone-1/index.html)
 
 If you want a copy of this file go to the github repository and download it
 
-- `git clone https://github.com/Metsanpeitto/Portfolio_1`
+- `git clone https://github.com/Metsanpeitto/capstone-1`
 
 After cloning it you can see the project opening the index.html file with your favorite browser ( Firefox for example )
 
