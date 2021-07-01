@@ -42,6 +42,10 @@ Visit her profile and send her some love for her amazing job!
 
 ## Getting Started
 
+If you want to visit the Figma Design System that I created to help me building this project you can visit the following link
+
+- [`https://www.figma.com/file/uxDIr6zq8lVsdJH08j6b0w/capstone-1`] (https://www.figma.com/file/uxDIr6zq8lVsdJH08j6b0w/capstone-1)
+
 If you want to visit the deployed app just visit the following link:
 
 - [`https://metsanpeitto.github.io/capstone-1/index.html`](https://metsanpeitto.github.io/capstone-1/index.html)
