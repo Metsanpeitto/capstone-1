@@ -677,7 +677,7 @@ p {
   display: none;
 }
 .l-about .about-content .about-content-2 .matrix-large {
-  background-image: url(/images/matrix-large.svg);
+  background-image: url(../images/matrix-large.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 2;
@@ -696,7 +696,7 @@ p {
   animation-direction: alternate-reverse;
 }
 .l-about .about-content .about-content-2 .circle-black {
-  background-image: url(/images/circle-black.svg);
+  background-image: url(../images/circle-black.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 1;
@@ -715,7 +715,7 @@ p {
   animation-direction: reverse;
 }
 .l-about .about-content .about-content-2 .circle-red {
-  background-image: url(/images/circle-red.svg);
+  background-image: url(../images/circle-red.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 50px;
@@ -732,7 +732,7 @@ p {
           animation: spin 50s ease-in-out infinite;
 }
 .l-about .about-content .about-content-2 .circle-chess {
-  background-image: url(/images/circle-chess.svg);
+  background-image: url(../images/circle-chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 2;
@@ -755,7 +755,7 @@ p {
   top: -5%;
 }
 .l-about .about-content .about-content-2 .turn {
-  background-image: url(/images/turn.svg);
+  background-image: url(../images/turn.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -771,7 +771,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .chess {
-  background-image: url(/images/chess.svg);
+  background-image: url(../images/chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 47px;
@@ -789,7 +789,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .cross {
-  background-image: url(/images/cross.svg);
+  background-image: url(../images/cross.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -815,7 +815,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .o {
-  background-image: url(/images/o.svg);
+  background-image: url(../images/o.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -831,7 +831,7 @@ p {
           animation-delay: 12s;
 }
 .l-about .about-content .about-content-2 .dollar {
-  background-image: url(/images/dollar.svg);
+  background-image: url(../images/dollar.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -847,7 +847,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .squares {
-  background-image: url(/images/squares.svg);
+  background-image: url(../images/squares.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1525,7 +1525,7 @@ p {
   position: relative;
 }
 .l-landing .content .landing-content .matrix {
-  background-image: url(/images/matrix.svg);
+  background-image: url(../images/matrix.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 3;
@@ -1543,7 +1543,7 @@ p {
           animation: spin 50s ease-in-out infinite;
 }
 .l-landing .content .landing-content .turn {
-  background-image: url(/images/turn.svg);
+  background-image: url(../images/turn.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1558,7 +1558,7 @@ p {
           animation-delay: 2s;
 }
 .l-landing .content .landing-content .chess {
-  background-image: url(/images/chess.svg);
+  background-image: url(../images/chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 47px;
@@ -1575,7 +1575,7 @@ p {
           animation-delay: 4s;
 }
 .l-landing .content .landing-content .cross {
-  background-image: url(/images/cross.svg);
+  background-image: url(../images/cross.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1600,7 +1600,7 @@ p {
           animation-delay: 10s;
 }
 .l-landing .content .landing-content .o {
-  background-image: url(/images/o.svg);
+  background-image: url(../images/o.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1616,7 +1616,7 @@ p {
           animation-delay: 12s;
 }
 .l-landing .content .landing-content .dollar {
-  background-image: url(/images/dollar.svg);
+  background-image: url(../images/dollar.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1631,7 +1631,7 @@ p {
           animation-delay: 14s;
 }
 .l-landing .content .landing-content .squares {
-  background-image: url(/images/squares.svg);
+  background-image: url(../images/squares.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
