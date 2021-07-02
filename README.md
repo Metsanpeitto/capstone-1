@@ -62,8 +62,6 @@ After cloning it you can see the project opening the index.html file with your f
 
 ### Project requirements
 
-- You need to implement a simple validation:
-
 - You should personalize the content of your page. Choose a topic first and then design your webpage, keeping your topic in mind while you design it so that your page design works well for the topic you choose.
 - You should build only these 2 pages:
   - The _home page_.
