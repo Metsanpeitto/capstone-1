@@ -44,11 +44,11 @@ Visit her profile and send her some love for her amazing job!
 
 To watch the video showcasing the process of building this site please go to this Youtube link:
 
-- [`https://www.youtube.com/watch?v=lG3Q4bRfKuQ`] (https://www.youtube.com/watch?v=lG3Q4bRfKuQ)
+- [`https://www.youtube.com/watch?v=lG3Q4bRfKuQ`](https://www.youtube.com/watch?v=lG3Q4bRfKuQ)
 
 If you want to visit the Figma Design System that I created to help me building this project you can visit the following link
 
-- [`https://www.figma.com/file/uxDIr6zq8lVsdJH08j6b0w/capstone-1`] (https://www.figma.com/file/uxDIr6zq8lVsdJH08j6b0w/capstone-1)
+- [`https://www.figma.com/file/uxDIr6zq8lVsdJH08j6b0w/capstone-1`](https://www.figma.com/file/uxDIr6zq8lVsdJH08j6b0w/capstone-1)
 
 If you want to visit the deployed app just visit the following link:
 
