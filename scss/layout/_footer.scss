@@ -109,11 +109,12 @@
       grid-template-columns: 10% 30% 50% 10%;
       grid-template-rows: 20% 30% 30% 20%;
 
-      img {
+      .footbar-img {
+        width: 80%;
+        align-self: center;
         grid-row-start: 2;
         grid-row-end: 4;
         grid-column-start: 2;
-        width: 65%;
         padding: unset;
         justify-self: end;
       }
@@ -154,13 +155,15 @@
     .footbar {
       background-color: $color-primary;
 
-      img {
+      .footbar-img {
         &:nth-child(1) {
           display: none;
         }
 
         &:nth-child(2) {
           display: block;
+          align-self: center;
+          width: 80%;
         }
       }
 

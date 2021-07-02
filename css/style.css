@@ -1175,11 +1175,12 @@ p {
     grid-template-columns: 10% 30% 50% 10%;
     grid-template-rows: 20% 30% 30% 20%;
   }
-  .l-footer .footbar img {
+  .l-footer .footbar .footbar-img {
+    width: 80%;
+    align-self: center;
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 2;
-    width: 65%;
     padding: unset;
     justify-self: end;
   }
@@ -1215,11 +1216,14 @@ p {
   .about-footer .footbar {
     background-color: #272a31;
   }
-  .about-footer .footbar img:nth-child(1) {
+  .about-footer .footbar .footbar-img:nth-child(1) {
     display: none;
   }
-  .about-footer .footbar img:nth-child(2) {
+  .about-footer .footbar .footbar-img:nth-child(2) {
     display: block;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 80%;
   }
   .about-footer .footbar h6 {
     color: #fff;
@@ -1826,6 +1830,7 @@ p {
     margin-top: 3%;
   }
   .l-logo .logo-title h3 {
+    font-size: 28px;
     margin-top: 0%;
     margin-bottom: 0%;
   }
@@ -1997,6 +2002,7 @@ p {
     margin-top: 3%;
   }
   .l-past .past-title h3 {
+    font-size: 28px;
     margin-bottom: 2%;
   }
   .l-past .past-title .red-line-past {
@@ -2119,6 +2125,7 @@ p {
   padding-left: 15%;
   color: #ec5242;
   font-size: 14px;
+  font-weight: 600;
 }
 .l-program .card p {
   padding-left: 5%;
