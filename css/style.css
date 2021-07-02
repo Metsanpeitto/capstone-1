@@ -677,7 +677,7 @@ p {
   display: none;
 }
 .l-about .about-content .about-content-2 .matrix-large {
-  background-image: url(/images/matrix-large.svg);
+  background-image: url(../images/matrix-large.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 2;
@@ -696,7 +696,7 @@ p {
   animation-direction: alternate-reverse;
 }
 .l-about .about-content .about-content-2 .circle-black {
-  background-image: url(/images/circle-black.svg);
+  background-image: url(../images/circle-black.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 1;
@@ -715,7 +715,7 @@ p {
   animation-direction: reverse;
 }
 .l-about .about-content .about-content-2 .circle-red {
-  background-image: url(/images/circle-red.svg);
+  background-image: url(../images/circle-red.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 50px;
@@ -732,7 +732,7 @@ p {
           animation: spin 50s ease-in-out infinite;
 }
 .l-about .about-content .about-content-2 .circle-chess {
-  background-image: url(/images/circle-chess.svg);
+  background-image: url(../images/circle-chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 2;
@@ -755,7 +755,7 @@ p {
   top: -5%;
 }
 .l-about .about-content .about-content-2 .turn {
-  background-image: url(/images/turn.svg);
+  background-image: url(../images/turn.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -771,7 +771,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .chess {
-  background-image: url(/images/chess.svg);
+  background-image: url(../images/chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 47px;
@@ -789,7 +789,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .cross {
-  background-image: url(/images/cross.svg);
+  background-image: url(../images/cross.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -815,7 +815,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .o {
-  background-image: url(/images/o.svg);
+  background-image: url(../images/o.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -831,7 +831,7 @@ p {
           animation-delay: 12s;
 }
 .l-about .about-content .about-content-2 .dollar {
-  background-image: url(/images/dollar.svg);
+  background-image: url(../images/dollar.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -847,7 +847,7 @@ p {
   z-index: 0;
 }
 .l-about .about-content .about-content-2 .squares {
-  background-image: url(/images/squares.svg);
+  background-image: url(../images/squares.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1075,14 +1075,15 @@ p {
 .l-footer {
   background-color: #272a31;
   width: 100%;
-  height: 100vh;
+  height: 45vh;
   display: grid;
-  grid-template-rows: 10% 75% 15%;
+  grid-template-rows: 10vh 20vh 15vh;
   position: relative;
 }
 .l-footer .footer-title {
   justify-self: center;
-  padding: 10%;
+  -ms-flex-item-align: center;
+      align-self: center;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -1098,25 +1099,36 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 5vh;
+  padding-top: 0%;
 }
 .l-footer .logos img {
-  width: 30%;
-  margin: 2%;
+  width: 23%;
+  margin: 4%;
+}
+.l-footer .logos img:nth-child(1) {
+  margin-right: 5%;
+}
+.l-footer .logos img:nth-child(3) {
+  margin-left: 5%;
 }
 .l-footer .logos .google {
-  width: 25%;
+  width: 17%;
 }
 .l-footer .footbar {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.l-footer .footbar img {
+.l-footer .footbar .footbar-img {
   width: 45%;
   padding-left: 5%;
 }
-.l-footer .footbar img:nth-child(2) {
+.l-footer .footbar .footbar-img:nth-child(2) {
   display: none;
 }
 .l-footer .footbar h6 {
@@ -1163,11 +1175,12 @@ p {
     grid-template-columns: 10% 30% 50% 10%;
     grid-template-rows: 20% 30% 30% 20%;
   }
-  .l-footer .footbar img {
+  .l-footer .footbar .footbar-img {
+    width: 80%;
+    align-self: center;
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 2;
-    width: 65%;
     padding: unset;
     justify-self: end;
   }
@@ -1203,11 +1216,14 @@ p {
   .about-footer .footbar {
     background-color: #272a31;
   }
-  .about-footer .footbar img:nth-child(1) {
+  .about-footer .footbar .footbar-img:nth-child(1) {
     display: none;
   }
-  .about-footer .footbar img:nth-child(2) {
+  .about-footer .footbar .footbar-img:nth-child(2) {
     display: block;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 80%;
   }
   .about-footer .footbar h6 {
     color: #fff;
@@ -1323,7 +1339,7 @@ p {
 .l-header__nav .menu-buttons {
   width: 100%;
   height: 100vh;
-  background-image: url("/images/background.svg");
+  background-image: url("../images/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -1525,7 +1541,7 @@ p {
   position: relative;
 }
 .l-landing .content .landing-content .matrix {
-  background-image: url(/images/matrix.svg);
+  background-image: url(../images/matrix.svg);
   background-size: contain;
   background-repeat: no-repeat;
   grid-row-start: 3;
@@ -1543,7 +1559,7 @@ p {
           animation: spin 50s ease-in-out infinite;
 }
 .l-landing .content .landing-content .turn {
-  background-image: url(/images/turn.svg);
+  background-image: url(../images/turn.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1558,7 +1574,7 @@ p {
           animation-delay: 2s;
 }
 .l-landing .content .landing-content .chess {
-  background-image: url(/images/chess.svg);
+  background-image: url(../images/chess.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 47px;
@@ -1575,7 +1591,7 @@ p {
           animation-delay: 4s;
 }
 .l-landing .content .landing-content .cross {
-  background-image: url(/images/cross.svg);
+  background-image: url(../images/cross.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1600,7 +1616,7 @@ p {
           animation-delay: 10s;
 }
 .l-landing .content .landing-content .o {
-  background-image: url(/images/o.svg);
+  background-image: url(../images/o.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1616,7 +1632,7 @@ p {
           animation-delay: 12s;
 }
 .l-landing .content .landing-content .dollar {
-  background-image: url(/images/dollar.svg);
+  background-image: url(../images/dollar.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1631,7 +1647,7 @@ p {
           animation-delay: 14s;
 }
 .l-landing .content .landing-content .squares {
-  background-image: url(/images/squares.svg);
+  background-image: url(../images/squares.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -1814,6 +1830,7 @@ p {
     margin-top: 3%;
   }
   .l-logo .logo-title h3 {
+    font-size: 28px;
     margin-top: 0%;
     margin-bottom: 0%;
   }
@@ -1985,6 +2002,7 @@ p {
     margin-top: 3%;
   }
   .l-past .past-title h3 {
+    font-size: 28px;
     margin-bottom: 2%;
   }
   .l-past .past-title .red-line-past {
@@ -2051,7 +2069,7 @@ p {
 .l-program .program-background {
   height: 110vh;
   width: 100%;
-  background-image: url("/images/background.svg");
+  background-image: url("../images/background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -2107,6 +2125,7 @@ p {
   padding-left: 15%;
   color: #ec5242;
   font-size: 14px;
+  font-weight: 600;
 }
 .l-program .card p {
   padding-left: 5%;

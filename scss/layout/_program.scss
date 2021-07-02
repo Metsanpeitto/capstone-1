@@ -11,7 +11,7 @@
   .program-background {
     height: 110vh;
     width: 100%;
-    background-image: url('/images/background.svg');
+    background-image: url('../images/background.svg');
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -68,6 +68,7 @@
       padding-left: 15%;
       color: $color-secondary;
       font-size: 14px;
+      font-weight: 600;
     }
 
     p {
